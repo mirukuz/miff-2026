@@ -149,8 +149,8 @@ test('parseFilmPage 解析详情页', () => {
   assert.deepEqual(film.countries, ['USA']);
   assert.match(film.premiere ?? '', /Premiere/i);
   assert.ok(film.synopsis_en.length > 200, '简介应为多段正文');
-  assert.ok(!film.synopsis_en.includes('“'), '媒体评语不应混入简介');
-  assert.match(film.press_quote ?? '', /^[“"]/);
+  assert.match(film.press_quote ?? '', /^[“"]/, '末尾媒体评语应单独抽出');
+  assert.ok(!film.synopsis_en.includes('Hollywood Reporter'), '媒体评语段不应混入简介');
   assert.ok(Array.isArray(film.credits.Director));
   assert.match(film.poster, /^https:\/\/miff\.com\.au\/storage\//);
   assert.equal(film.item_hash, null);                 // 开票前为空
@@ -231,15 +231,18 @@ export function parseFilmPage(html, slug) {
   const $ = cheerio.load(html);
   const info = parseInfoLine($, $('#film_details div.leading-tight').first());
 
-  const paragraphs = [];
-  let pressQuote = null;
   // 简介限定在 #film_details 内第一个 .prose（页首活动文案也有 .prose，不能全局选）
+  const paragraphs = [];
   $('#film_details .prose').first().find('p').each((_, p) => {
     const t = clean($(p).text());
-    if (!t) return;
-    if (/^[“"]/.test(t)) pressQuote = t;   // 媒体评语：引号开头的最后一段
-    else paragraphs.push(t);
+    if (t) paragraphs.push(t);
   });
+  // 媒体评语：只把末尾连续的、以引号开头的段落摘出（简介正文中间合法地可含引号，不能误删）
+  const quotes = [];
+  while (paragraphs.length && /^[“"]/.test(paragraphs[paragraphs.length - 1])) {
+    quotes.unshift(paragraphs.pop());
+  }
+  const pressQuote = quotes.length ? quotes.join('\n\n') : null;
 
   const credits = {};
   $('#film_details .creditblock h4.credit-heading').each((_, h) => {
@@ -276,7 +279,9 @@ const lastHit = new Map(); // 按 host 限速
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-export async function politeFetch(url, { minDelayMs = 1100, retries = 3, headers = {} } = {}) {
+// blockedUrlPattern: 命中最终 URL（跟随重定向后）即判定为被反爬（豆瓣限流是 302 到
+// sec.douban.com 验证码页并返回 200，不是 403，必须按最终 URL 识别）
+export async function politeFetch(url, { minDelayMs = 1100, retries = 3, headers = {}, blockedUrlPattern = null } = {}) {
   const host = new URL(url).host;
   for (let attempt = 1; ; attempt++) {
     const wait = (lastHit.get(host) ?? 0) + minDelayMs - Date.now();
@@ -284,8 +289,8 @@ export async function politeFetch(url, { minDelayMs = 1100, retries = 3, headers
     lastHit.set(host, Date.now());
     try {
       const res = await fetch(url, { headers: { 'User-Agent': UA, ...headers }, redirect: 'follow' });
-      if (res.status === 403 || res.status === 429) {
-        const err = new Error(`HTTP ${res.status} for ${url}`);
+      if (res.status === 403 || res.status === 429 || (blockedUrlPattern && blockedUrlPattern.test(res.url))) {
+        const err = new Error(`blocked (HTTP ${res.status}, final URL ${res.url}) for ${url}`);
         err.blocked = true;
         throw err;
       }
@@ -326,17 +331,37 @@ git commit -m "feat: MIFF 页面解析纯函数 + 限速 fetch"
 - [ ] **Step 1: 实现 `scripts/scrape-miff.mjs`**
 
 ```js
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { politeFetch } from './lib/fetch.mjs';
 import { parseProgramPage, parseFilmPage } from './lib/parse-miff.mjs';
 
 const BASE = 'https://miff.com.au';
 
+// 7月9日全量上线后列表页可能改为 Livewire 分页/懒加载：那种情况下 parseProgramPage
+// 只能看到首屏卡片，流水线会"成功"跑出残缺站点。这里做三重截断检测，命中即硬失败。
+function assertNotTruncated(listHtml, cards) {
+  if (cards.length === 0) throw new Error('列表页解析出 0 部影片 —— 官网结构可能已改版');
+  const pagination = listHtml.match(/load[\s-]?more|nextPage|x-intersect|wire:click="[^"]*page/i);
+  if (pagination) {
+    throw new Error(`列表页出现分页/懒加载标记（${pagination[0]}），当前抓法只能拿到首屏 ${cards.length} 部 —— 需要适配枚举逻辑（见 README）`);
+  }
+  const totalMatch = listHtml.match(/(\d+)\s+(films|results|titles)/i);
+  if (totalMatch && Number(totalMatch[1]) > cards.length * 1.2) {
+    throw new Error(`页面声称共 ${totalMatch[1]} 部但只解析出 ${cards.length} 部 —— 列表被截断`);
+  }
+  if (existsSync('data/miff-raw.json')) {
+    const prev = JSON.parse(readFileSync('data/miff-raw.json', 'utf8')).films.length;
+    if (cards.length < prev * 0.5) {
+      throw new Error(`影片数从上次的 ${prev} 骤降到 ${cards.length} —— 疑似列表截断，如确认官网真的缩减了片单，删除 data/miff-raw.json 后重跑`);
+    }
+  }
+}
+
 export async function scrape() {
   mkdirSync('data', { recursive: true });
   const listHtml = await politeFetch(`${BASE}/program`);
   const cards = parseProgramPage(listHtml);
-  if (cards.length === 0) throw new Error('列表页解析出 0 部影片 —— 官网结构可能已改版');
+  assertNotTruncated(listHtml, cards);
   console.log(`列表页发现 ${cards.length} 部影片`);
 
   const films = [];
@@ -463,14 +488,14 @@ Expected: FAIL — 模块不存在
 export function normalizeTitle(s) {
   return (s ?? '')
     .normalize('NFKD')
-    .replace(/[̀-ͯ]/g, '')   // 去变音符
+    .replace(/[\u0300-\u036f]/g, '')   // 去变音符（勿写成字面组合字符，格式化工具会静默破坏）
     .toLowerCase()
     .replace(/[’'"]/g, '')
     .replace(/[^a-z0-9]+/g, ' ')
     .trim();
 }
 
-const TYPE_SCORE = { movie: 3, tvMovie: 2, tvMiniSeries: 2, tvSeries: 2, documentary: 2, short: 1 };
+const TYPE_SCORE = { movie: 3, tvMovie: 2, tvMiniSeries: 2, tvSeries: 2, short: 1 };
 
 export function pickImdbMatch(film, candidates) {
   if (!film.year) return null;
@@ -541,8 +566,10 @@ export async function enrich() {
   // 第一遍：basics —— tconst(0) titleType(1) primaryTitle(2) originalTitle(3) ... startYear(5)
   const candidates = new Map(); // normTitle -> [{tconst,titleType,startYear,primaryTitle}]
   for await (const cols of tsvLines('data/cache/title.basics.tsv.gz')) {
-    for (const title of new Set([cols[2], cols[3]])) {
-      const key = normalizeTitle(title);
+    // 1100 万行的热循环，避免每行分配 Set
+    const keyPrimary = normalizeTitle(cols[2]);
+    const keyOriginal = cols[3] === cols[2] ? keyPrimary : normalizeTitle(cols[3]);
+    for (const key of keyPrimary === keyOriginal ? [keyPrimary] : [keyPrimary, keyOriginal]) {
       if (!wanted.has(key)) continue;
       if (!candidates.has(key)) candidates.set(key, []);
       candidates.get(key).push({
@@ -626,7 +653,15 @@ test('pickDoubanSuggest 年份±1 且类型 movie', () => {
 });
 
 test('pickDoubanSuggest 无年份匹配返回 null', () => {
-  assert.equal(pickDoubanSuggest({ title_en: 'X', year: 2026 }, [{ id: '1', year: '2000', type: 'movie' }]), null);
+  assert.equal(pickDoubanSuggest({ title_en: 'X', year: 2026 }, [{ id: '1', title: 'X', year: '2000', type: 'movie' }]), null);
+});
+
+test('pickDoubanSuggest 同年份但标题不符不匹配', () => {
+  const film = { title_en: 'Dead Man’s Wire', year: 2025 };
+  assert.equal(
+    pickDoubanSuggest(film, [{ id: '9', title: '另一部片', sub_title: 'Another Film', year: '2025', type: 'movie' }]),
+    null
+  );
 });
 
 test('parseDoubanRating 提取评分与人数', () => {
@@ -655,17 +690,25 @@ Expected: FAIL — 模块不存在
 - [ ] **Step 3: 实现 `scripts/lib/douban-match.mjs`**
 
 ```js
+import { normalizeTitle } from './imdb-match.mjs';
+
 export function doubanSearchUrl(title) {
   return `https://www.douban.com/search?cat=1002&q=${encodeURIComponent(title)}`;
 }
 
 // suggest 接口条目形如 {id, title, sub_title, year, type, url}
+// 必须同时校验标题：suggest 对英文长标题常返回同年份的无关片，错误评分比没评分更糟
 export function pickDoubanSuggest(film, suggestions) {
   if (!film.year || !Array.isArray(suggestions)) return null;
-  return suggestions.find(
-    (s) => (s.type === 'movie' || s.type === undefined) &&
-           s.year && Math.abs(Number(s.year) - film.year) <= 1
-  ) ?? null;
+  const want = normalizeTitle(film.title_en);
+  if (!want) return null;
+  return suggestions.find((s) => {
+    if (s.type !== 'movie' && s.type !== undefined) return false;
+    if (!s.year || Math.abs(Number(s.year) - film.year) > 1) return false;
+    // 豆瓣条目 title 常是"中文名"、sub_title 是原文名；合并归一化后要求包含英文片名
+    const got = normalizeTitle(`${s.title ?? ''} ${s.sub_title ?? ''}`);
+    return got.includes(want);
+  }) ?? null;
 }
 
 export function parseDoubanRating(html) {
@@ -681,7 +724,7 @@ export function parseDoubanRating(html) {
 - [ ] **Step 4: 运行测试确认通过**
 
 Run: `node --test tests/douban-match.test.mjs`
-Expected: PASS（5 个测试）
+Expected: PASS（6 个测试）
 
 - [ ] **Step 5: 实现 `scripts/enrich-douban.mjs`**
 
@@ -693,22 +736,36 @@ import { doubanSearchUrl, pickDoubanSuggest, parseDoubanRating } from './lib/dou
 const CACHE_DIR = 'data/cache/douban';
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
+// 豆瓣限流通常不是 403，而是 302 到 sec.douban.com 验证码页返回 200 —— 两条路径都要熔断
+const DOUBAN_OPTS = () => ({
+  minDelayMs: 3000 + Math.random() * 2000,
+  headers: { Referer: 'https://movie.douban.com/' },
+  blockedUrlPattern: /sec\.douban\.com|login\.douban\.com/,
+});
+
 async function lookupDouban(film) {
   const cachePath = `${CACHE_DIR}/${film.slug}.json`;
   if (existsSync(cachePath)) return JSON.parse(readFileSync(cachePath, 'utf8'));
 
   const fallback = { search_url: doubanSearchUrl(film.title_en) };
-  const headers = { Referer: 'https://movie.douban.com/' };
   const suggestUrl = `https://movie.douban.com/j/subject_suggest?q=${encodeURIComponent(film.title_en)}`;
-  const suggestions = JSON.parse(await politeFetch(suggestUrl, { minDelayMs: 3000 + Math.random() * 2000, headers }));
-  const hit = pickDoubanSuggest(film, suggestions);
-  let result = fallback;
-  if (hit) {
-    const url = `https://movie.douban.com/subject/${hit.id}/`;
-    const { rating, votes } = parseDoubanRating(await politeFetch(url, { minDelayMs: 3000 + Math.random() * 2000, headers }));
-    result = { id: String(hit.id), rating, votes, url, search_url: fallback.search_url };
+  const body = await politeFetch(suggestUrl, DOUBAN_OPTS());
+  let suggestions;
+  try {
+    suggestions = JSON.parse(body);
+  } catch {
+    // 返回了 HTML 而不是 JSON：也是被反爬的表现，按 blocked 处理
+    const err = new Error(`suggest 返回非 JSON（疑似验证码页）: ${body.slice(0, 80)}`);
+    err.blocked = true;
+    throw err;
   }
-  writeFileSync(cachePath, JSON.stringify(result));
+  const hit = pickDoubanSuggest(film, suggestions);
+  if (!hit) return fallback;   // 未命中不写缓存：7月9日后条目可能才建立，重跑时要能重查
+  const url = `https://movie.douban.com/subject/${hit.id}/`;
+  const { rating, votes } = parseDoubanRating(await politeFetch(url, DOUBAN_OPTS()));
+  const result = { id: String(hit.id), rating, votes, url, search_url: fallback.search_url };
+  // 只缓存"有评分"的最终态；无评分的条目下次重跑要能刷新到新出的评分
+  if (rating != null) writeFileSync(cachePath, JSON.stringify(result));
   return result;
 }
 
@@ -859,7 +916,9 @@ export async function translate() {
   }
   console.log();
   if (errors.length) {
-    console.warn(`翻译失败 ${errors.length} 部（已保留英文原文）：`, errors.map((e) => e.slug).join(', '));
+    const prev = existsSync('data/errors.json') ? JSON.parse(readFileSync('data/errors.json', 'utf8')) : [];
+    writeFileSync('data/errors.json', JSON.stringify([...prev, ...errors.map((e) => ({ step: 'translate', ...e }))], null, 2));
+    console.warn(`翻译失败 ${errors.length} 部（已保留英文原文，详见 data/errors.json）：`, errors.map((e) => e.slug).join(', '));
     if (errors.length / raw.films.length > 0.2) {
       console.error('翻译失败率超 20%，中止（检查 claude CLI 是否可用）');
       process.exit(1);
@@ -1044,8 +1103,11 @@ function card(f) {
   const doubanUrl = f.douban?.url ?? f.douban?.search_url;
   const synopsis = (f.synopsis_zh ?? f.synopsis_en ?? '').split('\n\n')
     .map((p) => `<p>${esc(p)}</p>`).join('');
+  const posterHtml = f.poster
+    ? `<img class="poster" src="${esc(f.poster)}" alt="${esc(f.title_zh ?? f.title_en)} 海报" loading="lazy">`
+    : '<div class="poster poster-empty"></div>';
   return `<article class="card" data-slug="${esc(f.slug)}">
-    <img class="poster" src="${esc(f.poster ?? '')}" alt="${esc(f.title_zh ?? f.title_en)} 海报" loading="lazy">
+    ${posterHtml}
     <div class="card-body">
       <h2>${esc(f.title_zh ?? f.title_en)}</h2>
       <p class="title-en">${esc(f.title_en)}</p>
@@ -1213,7 +1275,8 @@ npm run build        # scrape → imdb → douban → translate，产出 site/fi
 npm test
 ​```
 
-- 已翻译影片按内容哈希缓存于 `data/translations/`，只翻新片
+- 已翻译影片按内容哈希缓存于 `data/translations/`，只翻新片；全量数百部首次翻译为串行 claude 调用，预计 1–2 小时
+- 若列表页抓取因"分页/懒加载标记"报错退出：官网已改版为分页，需改 `scrape-miff.mjs` 的 slug 枚举逻辑
 - 单跑某步：`npm run build -- --step=douban`
 - 豆瓣被限流：稍后重跑 `--step=douban,translate`（已匹配的有缓存）
 - 抓取失败清单：`data/errors.json`

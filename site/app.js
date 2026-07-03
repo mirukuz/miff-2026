@@ -26,16 +26,21 @@ function sortFilms(list) {
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) =>
   ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
+const safeUrl = (u) => /^https?:\/\//i.test(u ?? '') ? u : null;
+
 function badge(cls, label, rating, url) {
   const text = rating != null ? rating.toFixed(1) : '暂无';
   const inner = `<span class="badge ${cls}${rating == null ? ' none' : ''}">${label} ${text}</span>`;
-  return url ? `<a href="${esc(url)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${inner}</a>` : inner;
+  const safe = safeUrl(url);
+  return safe ? `<a href="${esc(safe)}" target="_blank" rel="noopener">${inner}</a>` : inner;
 }
 
 function card(f) {
   const meta = [f.director, f.year, f.country, f.runtime ? `${f.runtime} 分钟` : null]
     .filter(Boolean).join(' · ');
-  const doubanUrl = f.douban?.url ?? f.douban?.search_url;
+  const doubanUrl = safeUrl(f.douban?.url) ?? safeUrl(f.douban?.search_url);
+  const miffUrl = safeUrl(f.miff_url);
+  const imdbUrl = safeUrl(f.imdb?.url);
   const synopsis = (f.synopsis_zh ?? f.synopsis_en ?? '').split('\n\n')
     .map((p) => `<p>${esc(p)}</p>`).join('');
   const posterHtml = f.poster
@@ -48,16 +53,16 @@ function card(f) {
       <p class="title-en">${esc(f.title_en)}</p>
       <div class="badges">
         ${badge('douban', '豆瓣', f.douban?.rating ?? null, doubanUrl)}
-        ${badge('imdb', 'IMDB', f.imdb?.rating ?? null, f.imdb?.url)}
+        ${badge('imdb', 'IMDB', f.imdb?.rating ?? null, imdbUrl)}
       </div>
       ${f.highlight_zh ? `<p class="highlight">💡 ${esc(f.highlight_zh)}</p>` : ''}
       <p class="meta">${esc(meta)}</p>
       <div class="detail" hidden>
         ${synopsis}
         <p class="links">
-          <a href="${esc(f.miff_url)}" target="_blank" rel="noopener">MIFF 官网页面 ↗</a>
-          ${doubanUrl ? `<a href="${esc(doubanUrl)}" target="_blank" rel="noopener">${f.douban?.url ? '豆瓣条目' : '豆瓣搜索'} ↗</a>` : ''}
-          ${f.imdb?.url ? `<a href="${esc(f.imdb.url)}" target="_blank" rel="noopener">IMDB ↗</a>` : ''}
+          ${miffUrl ? `<a href="${esc(miffUrl)}" target="_blank" rel="noopener">MIFF 官网页面 ↗</a>` : ''}
+          ${doubanUrl ? `<a href="${esc(doubanUrl)}" target="_blank" rel="noopener">${safeUrl(f.douban?.url) ? '豆瓣条目' : '豆瓣搜索'} ↗</a>` : ''}
+          ${imdbUrl ? `<a href="${esc(imdbUrl)}" target="_blank" rel="noopener">IMDB ↗</a>` : ''}
         </p>
       </div>
     </div>

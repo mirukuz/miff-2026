@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build.mjs",
-    "test": "node --test tests/*.test.mjs"
+    "test": "node --test tests/*.test.mjs",
+    "dev": "python3 -m http.server 8321 --directory site"
   },
   "dependencies": {
     "cheerio": "^1.2.0"

@@ -6,10 +6,8 @@ import { promisify } from 'node:util';
 const exec = promisify(execFile);
 const CACHE_DIR = 'data/translations';
 
-const hashOf = (f) => createHash('sha256')
-  .update([f.title_en, f.synopsis_en ?? f.blurb ?? ''].join('\n'))
-  .digest('hex').slice(0, 16);
-
+// 抓取到的页面文本（简介/媒体评语等）会流入下面的 prompt；输出被约束为三个校验过的字符串字段，
+// 提示注入风险已识别并被限定在有限范围内。
 function buildPrompt(f) {
   return `你是电影节导览编辑。给中国观众翻译一部墨尔本电影节影片的资料。只输出一个 JSON 对象，不要任何其他文字或代码块标记，字段：
 - "title_zh": 中文片名。若豆瓣有通行译名请用它，否则给一个自然、信达雅的译名。
@@ -27,7 +25,11 @@ ${f.press_quote ? `媒体评语：${f.press_quote}` : ''}
 ${f.synopsis_en ?? f.blurb ?? '（无简介）'}`;
 }
 
-function parseModelJson(stdout) {
+// 缓存哈希覆盖 buildPrompt 的完整输出，确保任何会影响翻译结果的字段（导演/年份/国家/首映/媒体评语等）
+// 变化时都能使缓存失效，而不仅是标题和简介。
+const hashOf = (f) => createHash('sha256').update(buildPrompt(f)).digest('hex').slice(0, 16);
+
+export function parseModelJson(stdout) {
   const text = stdout.replace(/^```(json)?\s*|\s*```$/g, '').trim();
   const start = text.indexOf('{');
   const end = text.lastIndexOf('}');
@@ -87,7 +89,8 @@ export async function translate() {
   }
   console.log();
   if (errors.length) {
-    const prev = existsSync('data/errors.json') ? JSON.parse(readFileSync('data/errors.json', 'utf8')) : [];
+    const prevAll = existsSync('data/errors.json') ? JSON.parse(readFileSync('data/errors.json', 'utf8')) : [];
+    const prev = prevAll.filter((e) => e.step !== 'translate');
     writeFileSync('data/errors.json', JSON.stringify([...prev, ...errors.map((e) => ({ step: 'translate', ...e }))], null, 2));
     console.warn(`翻译失败 ${errors.length} 部（已保留英文原文，详见 data/errors.json）：`, errors.map((e) => e.slug).join(', '));
     if (errors.length / raw.films.length > 0.2) {

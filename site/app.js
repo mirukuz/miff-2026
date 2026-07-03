@@ -89,7 +89,7 @@ $list.addEventListener('click', (e) => {
   d.hidden = !d.hidden;
 });
 
-fetch('films.json')
+fetch('films.json', { cache: 'no-cache' })
   .then((r) => r.json())
   .then((data) => {
     films = data;

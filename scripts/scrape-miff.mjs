@@ -6,14 +6,17 @@ const BASE = 'https://miff.com.au';
 
 // 7月9日全量上线后列表页可能改为 Livewire 分页/懒加载：那种情况下 parseProgramPage
 // 只能看到首屏卡片，流水线会"成功"跑出残缺站点。这里做三重截断检测，命中即硬失败。
-function assertNotTruncated(listHtml, cards) {
+export function assertNotTruncated(listHtml, cards) {
   if (cards.length === 0) throw new Error('列表页解析出 0 部影片 —— 官网结构可能已改版');
-  const pagination = listHtml.match(/load[\s-]?more|nextPage|x-intersect|wire:click="[^"]*page/i);
+  // 排除 "download more"（否定后顾断言），避免与真正的 "load more" 分页标记混淆
+  const pagination = listHtml.match(/(?<!down)load[\s-]?more|nextPage|x-intersect|wire:click="[^"]*page/i);
   if (pagination) {
     throw new Error(`列表页出现分页/懒加载标记（${pagination[0]}），当前抓法只能拿到首屏 ${cards.length} 部 —— 需要适配枚举逻辑（见 README）`);
   }
   const totalMatch = listHtml.match(/(\d+)\s+(films|results|titles)/i);
-  if (totalMatch && Number(totalMatch[1]) > cards.length * 1.2) {
+  // 排除类似 "MIFF 2026 Films" 这种把年份误当总数的情况
+  const isYearLike = totalMatch && /^(19|20)\d{2}$/.test(totalMatch[1]);
+  if (totalMatch && !isYearLike && Number(totalMatch[1]) > cards.length * 1.2) {
     throw new Error(`页面声称共 ${totalMatch[1]} 部但只解析出 ${cards.length} 部 —— 列表被截断`);
   }
   if (existsSync('data/miff-raw.json')) {

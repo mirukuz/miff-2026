@@ -3,7 +3,6 @@ import { politeFetch } from './lib/fetch.mjs';
 import { doubanSearchUrl, pickDoubanSuggest, parseDoubanRating } from './lib/douban-match.mjs';
 
 const CACHE_DIR = 'data/cache/douban';
-const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 // 豆瓣限流通常不是 403，而是 302 到 sec.douban.com 验证码页返回 200 —— 两条路径都要熔断
 const DOUBAN_OPTS = () => ({
@@ -12,13 +11,17 @@ const DOUBAN_OPTS = () => ({
   blockedUrlPattern: /sec\.douban\.com|login\.douban\.com/,
 });
 
-async function lookupDouban(film) {
-  const cachePath = `${CACHE_DIR}/${film.slug}.json`;
+// 缓存读取不受熔断门控（读缓存不发网络请求）：中途被熔断时，
+// 已缓存的影片仍能拿到历史评分，不会在整体覆写 enriched-douban.json 时被静默丢弃。
+export async function lookupDouban(film, { cacheDir = CACHE_DIR, blocked = false, fetchImpl = politeFetch } = {}) {
+  const cachePath = `${cacheDir}/${film.slug}.json`;
   if (existsSync(cachePath)) return JSON.parse(readFileSync(cachePath, 'utf8'));
 
   const fallback = { search_url: doubanSearchUrl(film.title_en) };
+  if (blocked) return fallback; // 熔断只挡后面的网络查询，不挡上面的缓存读取
+
   const suggestUrl = `https://movie.douban.com/j/subject_suggest?q=${encodeURIComponent(film.title_en)}`;
-  const body = await politeFetch(suggestUrl, DOUBAN_OPTS());
+  const body = await fetchImpl(suggestUrl, DOUBAN_OPTS());
   let suggestions;
   try {
     suggestions = JSON.parse(body);
@@ -31,7 +34,7 @@ async function lookupDouban(film) {
   const hit = pickDoubanSuggest(film, suggestions);
   if (!hit) return fallback;   // 未命中不写缓存：7月9日后条目可能才建立，重跑时要能重查
   const url = `https://movie.douban.com/subject/${hit.id}/`;
-  const { rating, votes } = parseDoubanRating(await politeFetch(url, DOUBAN_OPTS()));
+  const { rating, votes } = parseDoubanRating(await fetchImpl(url, DOUBAN_OPTS()));
   const result = { id: String(hit.id), rating, votes, url, search_url: fallback.search_url };
   // 只缓存"有评分"的最终态；无评分的条目下次重跑要能刷新到新出的评分
   if (rating != null) writeFileSync(cachePath, JSON.stringify(result));
@@ -46,16 +49,14 @@ export async function enrich() {
   let matched = 0;
   for (const [i, f] of raw.films.entries()) {
     let douban = { search_url: doubanSearchUrl(f.title_en) };
-    if (!blocked) {
-      try {
-        douban = await lookupDouban(f);
-      } catch (e) {
-        if (e.blocked) {
-          blocked = true; // 被反爬：剩余影片全部降级为搜索链接，不再请求
-          console.warn(`\n豆瓣在第 ${i + 1} 部时限流（${e.message}），其余降级为搜索链接。稍后重跑可续（已匹配的有缓存）。`);
-        }
-        // 其他错误：该片降级，不中断
+    try {
+      douban = await lookupDouban(f, { blocked });
+    } catch (e) {
+      if (e.blocked) {
+        blocked = true; // 被反爬：剩余影片不再发网络请求（缓存命中仍生效），未缓存的降级为搜索链接
+        console.warn(`\n豆瓣在第 ${i + 1} 部时限流（${e.message}），其余降级为搜索链接。稍后重跑可续（已匹配的有缓存）。`);
       }
+      // 其他错误：该片降级，不中断
     }
     if (douban.rating != null) matched++;
     films.push({ ...f, douban });

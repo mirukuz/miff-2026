@@ -11,7 +11,7 @@ export function pickDoubanSuggest(film, suggestions) {
   const want = normalizeTitle(film.title_en);
   if (!want) return null;
   return suggestions.find((s) => {
-    if (s.type !== 'movie' && s.type !== undefined) return false;
+    if (s.type !== 'movie') return false; // 仅收 movie，无 type 字段的条目一并拒绝
     if (!s.year || Math.abs(Number(s.year) - film.year) > 1) return false;
     // 豆瓣条目 title 常是"中文名"、sub_title 是原文名；合并归一化后要求包含英文片名
     const got = normalizeTitle(`${s.title ?? ''} ${s.sub_title ?? ''}`);

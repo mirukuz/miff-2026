@@ -24,6 +24,14 @@ test('pickDoubanSuggest 同年份但标题不符不匹配', () => {
   );
 });
 
+test('pickDoubanSuggest 无 type 字段的条目不匹配', () => {
+  const film = { title_en: 'Dead Man’s Wire', year: 2025 };
+  assert.equal(
+    pickDoubanSuggest(film, [{ id: '4', title: '亡命之绳 Dead Man’s Wire', year: '2025' }]),
+    null
+  );
+});
+
 test('parseDoubanRating 提取评分与人数', () => {
   const html = `<strong class="ll rating_num " property="v:average">8.1</strong>
     <span property="v:votes">12345</span>`;

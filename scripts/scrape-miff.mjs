@@ -13,11 +13,14 @@ export function assertNotTruncated(listHtml, cards) {
   if (pagination) {
     throw new Error(`列表页出现分页/懒加载标记（${pagination[0]}），当前抓法只能拿到首屏 ${cards.length} 部 —— 需要适配枚举逻辑（见 README）`);
   }
-  const totalMatch = listHtml.match(/(\d+)\s+(films|results|titles)/i);
-  // 排除类似 "MIFF 2026 Films" 这种把年份误当总数的情况
-  const isYearLike = totalMatch && /^(19|20)\d{2}$/.test(totalMatch[1]);
-  if (totalMatch && !isYearLike && Number(totalMatch[1]) > cards.length * 1.2) {
-    throw new Error(`页面声称共 ${totalMatch[1]} 部但只解析出 ${cards.length} 部 —— 列表被截断`);
+  // 遍历所有 "N films/results/titles" 匹配，跳过年份形数字（如 "MIFF 2026 Films"），
+  // 取第一个非年份形的数字作为页面声称的总数参与比较
+  for (const m of listHtml.matchAll(/(\d+)\s+(films|results|titles)/gi)) {
+    if (/^(19|20)\d{2}$/.test(m[1])) continue;
+    if (Number(m[1]) > cards.length * 1.2) {
+      throw new Error(`页面声称共 ${m[1]} 部但只解析出 ${cards.length} 部 —— 列表被截断`);
+    }
+    break;
   }
   if (existsSync('data/miff-raw.json')) {
     const prev = JSON.parse(readFileSync('data/miff-raw.json', 'utf8')).films.length;
@@ -73,4 +76,4 @@ export async function scrape() {
   console.log(`完成：${films.length} 部影片写入 data/miff-raw.json；${errors.length} 个错误见 data/errors.json`);
 }
 
-if (process.argv[1].endsWith('scrape-miff.mjs')) await scrape();
+if (process.argv[1]?.endsWith('scrape-miff.mjs')) await scrape();

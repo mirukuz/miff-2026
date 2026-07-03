@@ -1,11 +1,16 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
+import { mkdtempSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
 import { assertNotTruncated } from '../scripts/scrape-miff.mjs';
 import { parseModelJson } from '../scripts/translate.mjs';
 
-// data/miff-raw.json (if present) currently holds 27 films; assertNotTruncated's
-// prev-count guard throws if cards.length < prev * 0.5. Use >=27 cards here so
-// these tests stay deterministic regardless of that file's presence/content.
+// assertNotTruncated 的骤降检测会读取 cwd 下的 data/miff-raw.json（存在时）。
+// 切到临时目录使该检测短路，测试与仓库真实数据完全解耦——无论 7月9日 全量抓取后
+// prev 变成多少，这些用例都保持确定性。node --test 每个测试文件独立进程，chdir 安全。
+process.chdir(mkdtempSync(join(tmpdir(), 'pipeline-guards-')));
+
 const CARD_COUNT = 27;
 const cards = Array.from({ length: CARD_COUNT }, (_, i) => ({ slug: `film-${i}` }));
 
@@ -16,6 +21,11 @@ test('assertNotTruncated 对提及 "MIFF 2026 Films" 的正常页面不报错', 
 
 test('assertNotTruncated 在声称总数远大于解析数时报错', () => {
   const html = '<div>showing 300 films</div>';
+  assert.throws(() => assertNotTruncated(html, cards), /列表被截断/);
+});
+
+test('assertNotTruncated 年份匹配在前、真实总数在后仍能触发截断报错', () => {
+  const html = '<title>MIFF 2026 Films</title><div>showing 300 films</div>';
   assert.throws(() => assertNotTruncated(html, cards), /列表被截断/);
 });
 

@@ -81,4 +81,4 @@ export async function enrich() {
   console.log(`IMDB 匹配 ${matched}/${films.length}（电影节新片匹配不到属正常）`);
 }
 
-if (process.argv[1].endsWith('enrich-imdb.mjs')) await enrich();
+if (process.argv[1]?.endsWith('enrich-imdb.mjs')) await enrich();

@@ -102,4 +102,4 @@ export async function translate() {
   console.log(`site/films.json 写入 ${out.length} 部影片`);
 }
 
-if (process.argv[1].endsWith('translate.mjs')) await translate();
+if (process.argv[1]?.endsWith('translate.mjs')) await translate();

@@ -67,4 +67,4 @@ export async function enrich() {
   console.log(`豆瓣有评分 ${matched}/${films.length}（新片无条目/无评分属正常）`);
 }
 
-if (process.argv[1].endsWith('enrich-douban.mjs')) await enrich();
+if (process.argv[1]?.endsWith('enrich-douban.mjs')) await enrich();

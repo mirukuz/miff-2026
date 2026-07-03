@@ -57,8 +57,9 @@ export async function scrape() {
   }
   console.log();
 
-  // 完整性校验：防官网改版后静默产出坏数据
-  const bad = films.filter((f) => !f.title_en || !f.synopsis_en).length + errors.length;
+  // 完整性校验：防官网改版后静默产出坏数据。
+  // 详情页缺长简介但列表页有 blurb 的算合格（翻译步骤以 blurb 兜底）。
+  const bad = films.filter((f) => !f.title_en || (!f.synopsis_en && !f.blurb)).length + errors.length;
   const ratio = bad / cards.length;
   writeFileSync('data/errors.json', JSON.stringify(errors, null, 2));
   if (ratio > 0.2) {

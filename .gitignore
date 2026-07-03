@@ -1,0 +1,5 @@
+node_modules/
+data/*
+!data/translations/
+data/translations/.tmp*
+.DS_Store

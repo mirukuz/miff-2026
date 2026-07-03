@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MIFF 2026 墨尔本电影节中文导览</title>
+<meta name="description" content="墨尔本国际电影节 2026 中文片单：豆瓣/IMDB 评分、中文简介、一句话看点">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <h1>MIFF 2026 中文导览</h1>
+  <p class="subtitle">墨尔本国际电影节 · 片单含豆瓣 / IMDB 评分与中文简介</p>
+  <p class="notice" id="notice"></p>
+  <nav class="sort-bar" id="sort-bar" aria-label="排序方式">
+    <button data-sort="douban" class="active">豆瓣评分</button>
+    <button data-sort="imdb">IMDB 评分</button>
+    <button data-sort="title">片名</button>
+  </nav>
+</header>
+<main id="film-list" class="film-list" aria-live="polite"></main>
+<footer class="site-footer">
+  <p>数据来自 <a href="https://miff.com.au/program" target="_blank" rel="noopener">MIFF 官网</a>、IMDB 与豆瓣 · 非官方站点 · 完整节目单 7 月 9 日发布</p>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+:root {
+  --douban: #2e963d;
+  --imdb: #f5c518;
+  --bg: #101014;
+  --card: #1a1a21;
+  --text: #ececf0;
+  --muted: #9a9aa5;
+  --accent: #e8452c;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+.site-header { padding: 24px 16px 8px; max-width: 720px; margin: 0 auto; }
+.site-header h1 { margin: 0; font-size: 1.6rem; }
+.subtitle, .notice { color: var(--muted); font-size: .9rem; margin: 4px 0; }
+.sort-bar { display: flex; gap: 8px; margin: 12px 0; }
+.sort-bar button {
+  background: var(--card); color: var(--text); border: 1px solid #333;
+  border-radius: 999px; padding: 6px 14px; font-size: .9rem; cursor: pointer;
+}
+.sort-bar button.active { background: var(--accent); border-color: var(--accent); }
+.film-list { max-width: 720px; margin: 0 auto; padding: 0 16px 40px; display: grid; gap: 16px; }
+.card {
+  background: var(--card); border-radius: 12px; overflow: hidden; cursor: pointer;
+  display: grid; grid-template-columns: 120px 1fr;
+}
+.poster { width: 120px; height: 100%; min-height: 160px; object-fit: cover; background: #000; }
+.card-body { padding: 12px 14px; min-width: 0; }
+.card-body h2 { margin: 0; font-size: 1.1rem; }
+.title-en { color: var(--muted); font-size: .85rem; margin: 2px 0 8px; }
+.badges { display: flex; gap: 8px; margin-bottom: 8px; }
+.badges a { text-decoration: none; }
+.badge { font-size: .8rem; font-weight: 700; padding: 2px 8px; border-radius: 4px; color: #000; }
+.badge.douban { background: var(--douban); color: #fff; }
+.badge.imdb { background: var(--imdb); }
+.badge.none { background: #333; color: var(--muted); font-weight: 400; }
+.highlight { font-size: .92rem; margin: 6px 0; }
+.meta { color: var(--muted); font-size: .8rem; margin: 4px 0; }
+.detail { font-size: .92rem; border-top: 1px solid #2a2a33; margin-top: 8px; padding-top: 8px; }
+.detail p { margin: 0 0 8px; }
+.links a { color: var(--accent); margin-right: 12px; }
+.site-footer { text-align: center; color: var(--muted); font-size: .8rem; padding: 16px; }
+.error { color: var(--accent); text-align: center; }
+@media (max-width: 480px) {
+  .card { grid-template-columns: 96px 1fr; }
+  .poster { width: 96px; }
+}

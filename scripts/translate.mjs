@@ -29,12 +29,42 @@ ${f.synopsis_en ?? f.blurb ?? '（无简介）'}`;
 // 变化时都能使缓存失效，而不仅是标题和简介。
 const hashOf = (f) => createHash('sha256').update(buildPrompt(f)).digest('hex').slice(0, 16);
 
+// 模型偶尔在字符串值里输出未转义的英文双引号（如 自称"作者"）。真正的结构引号后面必然紧跟
+// ASCII 的 : , } ]（中文文本用全角标点），据此把内容引号转义后重新解析。
+function repairUnescapedQuotes(json) {
+  let out = '';
+  let inString = false;
+  for (let i = 0; i < json.length; i++) {
+    const c = json[i];
+    if (!inString) {
+      if (c === '"') inString = true;
+      out += c;
+      continue;
+    }
+    if (c === '\\') { out += c + (json[++i] ?? ''); continue; }
+    if (c === '"') {
+      const rest = json.slice(i + 1).match(/^\s*(.)/);
+      if (!rest || [':', ',', '}', ']'].includes(rest[1])) { inString = false; out += c; }
+      else out += '\\"';
+      continue;
+    }
+    out += c;
+  }
+  return out;
+}
+
 export function parseModelJson(stdout) {
   const text = stdout.replace(/^```(json)?\s*|\s*```$/g, '').trim();
   const start = text.indexOf('{');
   const end = text.lastIndexOf('}');
   if (start === -1 || end === -1) throw new Error(`模型输出中未找到 JSON: ${text.slice(0, 200)}`);
-  const obj = JSON.parse(text.slice(start, end + 1));
+  const slice = text.slice(start, end + 1);
+  let obj;
+  try {
+    obj = JSON.parse(slice);
+  } catch {
+    obj = JSON.parse(repairUnescapedQuotes(slice));
+  }
   for (const k of ['title_zh', 'synopsis_zh', 'highlight_zh']) {
     if (typeof obj[k] !== 'string' || !obj[k].trim()) throw new Error(`模型输出缺少字段 ${k}`);
   }
@@ -48,12 +78,23 @@ async function translateFilm(f) {
     const cached = JSON.parse(readFileSync(cachePath, 'utf8'));
     if (cached.hash === hash) return cached;   // 内容没变，不重翻
   }
-  const { stdout } = await exec('claude', ['-p', buildPrompt(f)], {
-    maxBuffer: 1024 * 1024,
-    timeout: 300000,
-    stdio: ['ignore', 'pipe', 'pipe'],
-  });
-  const t = { hash, ...parseModelJson(stdout) };
+  // 模型偶尔输出不合法 JSON（字符串内未转义的引号等），属间歇性问题，解析失败时重试
+  const MAX_ATTEMPTS = 3;
+  let parsed;
+  for (let attempt = 1; ; attempt++) {
+    const { stdout } = await exec('claude', ['-p', buildPrompt(f)], {
+      maxBuffer: 1024 * 1024,
+      timeout: 300000,
+      stdio: ['ignore', 'pipe', 'pipe'],
+    });
+    try {
+      parsed = parseModelJson(stdout);
+      break;
+    } catch (e) {
+      if (attempt >= MAX_ATTEMPTS) throw e;
+    }
+  }
+  const t = { hash, ...parsed };
   writeFileSync(cachePath, JSON.stringify(t, null, 2));
   return t;
 }
@@ -92,10 +133,11 @@ export async function translate() {
     });
   }
   console.log();
+  // 无论成败都重写 errors.json 的 translate 部分，避免旧错误在全部成功后残留
+  const prevAll = existsSync('data/errors.json') ? JSON.parse(readFileSync('data/errors.json', 'utf8')) : [];
+  const prev = prevAll.filter((e) => e.step !== 'translate');
+  writeFileSync('data/errors.json', JSON.stringify([...prev, ...errors.map((e) => ({ step: 'translate', ...e }))], null, 2));
   if (errors.length) {
-    const prevAll = existsSync('data/errors.json') ? JSON.parse(readFileSync('data/errors.json', 'utf8')) : [];
-    const prev = prevAll.filter((e) => e.step !== 'translate');
-    writeFileSync('data/errors.json', JSON.stringify([...prev, ...errors.map((e) => ({ step: 'translate', ...e }))], null, 2));
     console.warn(`翻译失败 ${errors.length} 部（已保留英文原文，详见 data/errors.json）：`, errors.map((e) => e.slug).join(', '));
     if (errors.length / raw.films.length > 0.2) {
       console.error('翻译失败率超 20%，中止（检查 claude CLI 是否可用）');

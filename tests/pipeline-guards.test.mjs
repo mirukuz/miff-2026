@@ -82,3 +82,9 @@ test('parseModelJson 在缺字段时报错', () => {
 test('parseModelJson 对非 JSON 垃圾输出报错', () => {
   assert.throws(() => parseModelJson('抱歉，我无法完成这个请求。'), /未找到 JSON/);
 });
+
+test('parseModelJson 修复字符串值内未转义的英文双引号', () => {
+  const bad = '{"title_zh":"对未来的乡愁","synopsis_zh":"他自称"最有名的无名电影作者"，但事实恰恰相反。","highlight_zh":"看点"}';
+  const out = parseModelJson(bad);
+  assert.equal(out.synopsis_zh, '他自称"最有名的无名电影作者"，但事实恰恰相反。');
+});

@@ -11,7 +11,8 @@ npm test
 ```
 
 - 已翻译影片按内容哈希缓存于 `data/translations/`，只翻新片；全量数百部首次翻译为串行 claude 调用，预计 1–2 小时
-- 若列表页抓取因"分页/懒加载标记"报错退出：官网已改版为分页，需改 `scrape-miff.mjs` 的 slug 枚举逻辑
+- 列表页为分页版（`/program/films?page=N`），`scrape-miff.mjs` 沿 `rel="next"` 抓完所有页并按 slug 去重；
+  快速验证：`node scripts/scrape-miff.mjs --list-only`（只抓列表），`--limit=5`（抽样 5 部详情，写 `data/miff-raw.sample.json` 不动基线）
 - 单跑某步：`npm run build -- --step=douban`
 - 豆瓣被限流：未匹配结果不会写入缓存，稍后直接重跑 `npm run build -- --step=douban,translate` 即可续跑
 - 抓取失败清单：`data/errors.json`

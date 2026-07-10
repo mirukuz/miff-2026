@@ -48,7 +48,11 @@ async function translateFilm(f) {
     const cached = JSON.parse(readFileSync(cachePath, 'utf8'));
     if (cached.hash === hash) return cached;   // 内容没变，不重翻
   }
-  const { stdout } = await exec('claude', ['-p', buildPrompt(f)], { maxBuffer: 1024 * 1024, timeout: 180000 });
+  const { stdout } = await exec('claude', ['-p', buildPrompt(f)], {
+    maxBuffer: 1024 * 1024,
+    timeout: 300000,
+    stdio: ['ignore', 'pipe', 'pipe'],
+  });
   const t = { hash, ...parseModelJson(stdout) };
   writeFileSync(cachePath, JSON.stringify(t, null, 2));
   return t;

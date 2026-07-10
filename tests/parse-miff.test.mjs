@@ -1,10 +1,12 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { parseProgramPage, parseFilmPage } from '../scripts/lib/parse-miff.mjs';
+import { parseProgramPage, parseFilmPage, parseNextPageUrl, parseMaxPage } from '../scripts/lib/parse-miff.mjs';
 
 const programHtml = readFileSync(new URL('./fixtures/program.html', import.meta.url), 'utf8');
 const filmHtml = readFileSync(new URL('./fixtures/film-dead-mans-wire.html', import.meta.url), 'utf8');
+const page1Html = readFileSync(new URL('./fixtures/films-page1.html', import.meta.url), 'utf8');
+const page8Html = readFileSync(new URL('./fixtures/films-page8.html', import.meta.url), 'utf8');
 
 test('parseProgramPage 提取全部影片卡片', () => {
   const films = parseProgramPage(programHtml);
@@ -23,6 +25,22 @@ test('parseProgramPage 卡片字段按模式解析', () => {
   assert.ok(withRuntime.length / films.length > 0.8, '大多数卡片应解析出时长');
   const withDirector = films.filter(f => f.director);
   assert.ok(withDirector.length / films.length > 0.8, '大多数卡片应解析出导演');
+});
+
+test('parseProgramPage 解析全量片单分页列表页（每页 50 卡）', () => {
+  assert.equal(parseProgramPage(page1Html).length, 50);
+  assert.equal(parseProgramPage(page8Html).length, 25);
+});
+
+test('parseNextPageUrl 提取下一页链接，末页与旧单页均返回 null', () => {
+  assert.match(parseNextPageUrl(page1Html) ?? '', /\/program\/films\?page=2$/);
+  assert.equal(parseNextPageUrl(page8Html), null);
+  assert.equal(parseNextPageUrl(programHtml), null);
+});
+
+test('parseMaxPage 提取分页器最大页码，无分页器返回 1', () => {
+  assert.equal(parseMaxPage(page1Html), 8);
+  assert.equal(parseMaxPage(programHtml), 1);
 });
 
 test('parseFilmPage 解析详情页', () => {

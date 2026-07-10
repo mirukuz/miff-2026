@@ -60,6 +60,23 @@ export function parseProgramPage(html) {
   return films;
 }
 
+// 列表页分页器（Laravel paginator）：下一页链接带 rel="next"，末页没有
+export function parseNextPageUrl(html) {
+  const $ = cheerio.load(html);
+  return $('a[rel="next"]').attr('href') ?? null;
+}
+
+// 分页器可见的最大页码（无分页器返回 1），用于校验 rel="next" 链走完了没
+export function parseMaxPage(html) {
+  const $ = cheerio.load(html);
+  let max = 1;
+  $('a[href*="page="]').each((_, a) => {
+    const m = ($(a).attr('href') ?? '').match(/[?&]page=(\d+)/);
+    if (m) max = Math.max(max, Number(m[1]));
+  });
+  return max;
+}
+
 export function parseFilmPage(html, slug) {
   const $ = cheerio.load(html);
   const info = parseInfoLine($, $('#film_details div.leading-tight').first());

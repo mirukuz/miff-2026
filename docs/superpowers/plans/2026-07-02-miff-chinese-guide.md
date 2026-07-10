@@ -1043,7 +1043,7 @@ git commit -m "feat: 流水线编排，支持 --step 单跑"
 <body>
 <header class="site-header">
   <h1>MIFF 2026 中文导览</h1>
-  <p class="subtitle">墨尔本国际电影节 · 片单含豆瓣 / IMDB 评分与中文简介</p>
+  <p class="subtitle">墨尔本国际电影节 · 片单含IMDB 评分与中文简介</p>
   <p class="notice" id="notice"></p>
   <nav class="sort-bar" id="sort-bar" aria-label="排序方式">
     <button data-sort="douban" class="active">豆瓣评分</button>

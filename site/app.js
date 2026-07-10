@@ -1,5 +1,6 @@
 let films = [];
-let sortKey = 'douban';
+let bySlug = new Map();
+let sortKey = 'imdb';
 
 const $list = document.getElementById('film-list');
 
@@ -35,14 +36,34 @@ function badge(cls, label, rating, url) {
   return safe ? `<a href="${esc(safe)}" target="_blank" rel="noopener">${inner}</a>` : inner;
 }
 
-function card(f) {
-  const meta = [f.director, f.year, f.country, f.runtime ? `${f.runtime} 分钟` : null]
-    .filter(Boolean).join(' · ');
+// 只渲染有评分的 badge（抓不到评分的「暂无」pill 不显示）；若两个都无则整行不渲染。
+function badges(f, doubanUrl, imdbUrl) {
+  const items = [];
+  if (f.douban?.rating != null) items.push(badge('douban', '豆瓣', f.douban.rating, doubanUrl));
+  if (f.imdb?.rating != null) items.push(badge('imdb', 'IMDB', f.imdb.rating, imdbUrl));
+  return items.length ? `<div class="badges">${items.join('\n        ')}</div>` : '';
+}
+
+// detail 内部 HTML（简介 + 外链）。首屏不渲染，展开时按需构建，避免一次性建 375 份简介 DOM。
+function detailHtml(f) {
   const doubanUrl = safeUrl(f.douban?.url) ?? safeUrl(f.douban?.search_url);
   const miffUrl = safeUrl(f.miff_url);
   const imdbUrl = safeUrl(f.imdb?.url);
   const synopsis = (f.synopsis_zh ?? f.synopsis_en ?? '').split('\n\n')
     .map((p) => `<p>${esc(p)}</p>`).join('');
+  return `${synopsis}
+    <p class="links">
+      ${miffUrl ? `<a href="${esc(miffUrl)}" target="_blank" rel="noopener">MIFF 官网页面 ↗</a>` : ''}
+      ${doubanUrl ? `<a href="${esc(doubanUrl)}" target="_blank" rel="noopener">${safeUrl(f.douban?.url) ? '豆瓣条目' : '豆瓣搜索'} ↗</a>` : ''}
+      ${imdbUrl ? `<a href="${esc(imdbUrl)}" target="_blank" rel="noopener">IMDB ↗</a>` : ''}
+    </p>`;
+}
+
+function card(f) {
+  const meta = [f.director, f.year, f.country, f.runtime ? `${f.runtime} 分钟` : null]
+    .filter(Boolean).join(' · ');
+  const doubanUrl = safeUrl(f.douban?.url) ?? safeUrl(f.douban?.search_url);
+  const imdbUrl = safeUrl(f.imdb?.url);
   const posterHtml = f.poster
     ? `<img class="poster" src="${esc(f.poster)}" alt="${esc(f.title_zh ?? f.title_en)} 海报" loading="lazy">`
     : '<div class="poster poster-empty"></div>';
@@ -51,20 +72,10 @@ function card(f) {
     <div class="card-body">
       <h2>${esc(f.title_zh ?? f.title_en)}</h2>
       <p class="title-en">${esc(f.title_en)}</p>
-      <div class="badges">
-        ${badge('douban', '豆瓣', f.douban?.rating ?? null, doubanUrl)}
-        ${badge('imdb', 'IMDB', f.imdb?.rating ?? null, imdbUrl)}
-      </div>
+      ${badges(f, doubanUrl, imdbUrl)}
       ${f.highlight_zh ? `<p class="highlight">💡 ${esc(f.highlight_zh)}</p>` : ''}
-      <p class="meta">${esc(meta)}</p>
-      <div class="detail" hidden>
-        ${synopsis}
-        <p class="links">
-          ${miffUrl ? `<a href="${esc(miffUrl)}" target="_blank" rel="noopener">MIFF 官网页面 ↗</a>` : ''}
-          ${doubanUrl ? `<a href="${esc(doubanUrl)}" target="_blank" rel="noopener">${safeUrl(f.douban?.url) ? '豆瓣条目' : '豆瓣搜索'} ↗</a>` : ''}
-          ${imdbUrl ? `<a href="${esc(imdbUrl)}" target="_blank" rel="noopener">IMDB ↗</a>` : ''}
-        </p>
-      </div>
+      <p class="meta"><span>${esc(meta)}</span><span class="chevron" aria-hidden="true">⌄</span></p>
+      <div class="detail" hidden></div>
     </div>
   </article>`;
 }
@@ -86,13 +97,19 @@ $list.addEventListener('click', (e) => {
   const cardEl = e.target.closest('.card');
   if (!cardEl) return;
   const d = cardEl.querySelector('.detail');
+  if (!d.dataset.filled) {                    // 首次展开才构建简介 DOM
+    const f = bySlug.get(cardEl.dataset.slug);
+    if (f) d.innerHTML = detailHtml(f);
+    d.dataset.filled = '1';
+  }
   d.hidden = !d.hidden;
 });
 
-fetch('films.json', { cache: 'no-cache' })
+fetch('films.json')
   .then((r) => r.json())
   .then((data) => {
     films = data;
+    bySlug = new Map(data.map((f) => [f.slug, f]));
     document.getElementById('notice').textContent = `共 ${films.length} 部影片`;
     render();
   })

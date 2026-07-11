@@ -105,6 +105,24 @@ body {
   font-size: .95rem; padding: 8px; flex: none;
 }
 .fav-empty { color: var(--muted); }
+/* BookedAgain 推广卡：沿用其官网品牌视觉（暖橙渐变 + 奶油白文字） */
+.ad-card {
+  text-decoration: none;
+  background: linear-gradient(160deg, #e8904a, #c9583a);
+  color: #fff8f0;
+}
+.ad-poster { object-fit: cover; object-position: center; }
+.ad-card .title-en { color: rgba(255, 248, 240, .85); font-style: italic; }
+.ad-card .meta { color: rgba(255, 248, 240, .75); }
+.ad-card .chevron { color: #fff8f0; transform: none !important; }
+.ad-tag {
+  font-size: .65rem; font-weight: 400; color: rgba(255, 248, 240, .9);
+  border: 1px solid rgba(255, 248, 240, .5); border-radius: 4px; padding: 1px 6px;
+  vertical-align: middle; margin-left: 6px;
+}
+@media (max-width: 600px) {
+  .ad-poster { height: 140px; }
+}
 .error { color: var(--accent); text-align: center; }
 @media (max-width: 600px) {
   .card { grid-template-columns: 1fr; }

@@ -106,8 +106,26 @@ function card(f) {
   </article>`;
 }
 
+// BookedAgain 信息流推广卡：样式贴近电影卡片，整卡可点。
+// 第 7 张首插，之后每隔 AD_INTERVAL 张重复一次，保持低密度不打扰浏览
+const AD_POSITION = 6;
+const AD_INTERVAL = 80;
+const adCard = () => `<a class="card ad-card" href="https://bookedagain.xyz/?utm_source=miff-2026" target="_blank" rel="noopener">
+    <img class="poster ad-poster" src="ad-bookedagain.jpg" alt="BookedAgain：袋熊和考拉在森林里交换一本书" loading="lazy">
+    <div class="card-body">
+      <h2>BookedAgain <span class="ad-tag">推广</span></h2>
+      <p class="title-en">Books are meant to be read, not to gather dust.</p>
+      <p class="highlight">电影会散场，好故事不会。把书架上读完的那本，交给同城的下一位读者。</p>
+      <p class="meta"><span>bookedagain.xyz · 二手书的同城漂流</span><span class="chevron" aria-hidden="true">→</span></p>
+    </div>
+  </a>`;
+
 function render() {
-  $list.innerHTML = sortFilms(films).map(card).join('');
+  const cards = sortFilms(films).map(card);
+  for (let pos = AD_POSITION; pos < cards.length; pos += AD_INTERVAL + 1) {
+    cards.splice(pos, 0, adCard());
+  }
+  $list.innerHTML = cards.join('');
 }
 
 document.getElementById('sort-bar').addEventListener('click', (e) => {

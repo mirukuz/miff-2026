@@ -19,6 +19,17 @@
   </nav>
 </header>
 <main id="film-list" class="film-list" aria-live="polite"></main>
+<button id="fav-fab" class="fav-fab" aria-label="打开想看列表" hidden>
+  ♥<span id="fav-count" class="fav-count">0</span>
+</button>
+<dialog id="fav-dialog" class="fav-dialog">
+  <div class="fav-dialog-head">
+    <h2>想看列表</h2>
+    <button id="fav-copy" class="fav-copy">复制片单</button>
+    <button id="fav-close" class="fav-close" aria-label="关闭">✕</button>
+  </div>
+  <ul id="fav-items" class="fav-items"></ul>
+</dialog>
 <footer class="site-footer">
   <p>数据来自 <a href="https://miff.com.au/program" target="_blank" rel="noopener">MIFF 官网</a>、IMDB 与豆瓣 · 非官方站点 · 完整节目单 7 月 9 日发布</p>
 </footer>

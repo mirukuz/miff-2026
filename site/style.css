@@ -49,6 +49,61 @@ body {
 .detail p { margin: 0 0 8px; }
 .links a { color: var(--accent); margin-right: 16px; padding: 4px 0; display: inline-block; }
 .site-footer { text-align: center; color: var(--muted); font-size: .8rem; padding: 16px; }
+.card-body { position: relative; }
+.fav-btn {
+  position: absolute; top: 8px; right: 10px;
+  background: none; border: none; cursor: pointer;
+  font-size: 1.4rem; line-height: 1; color: var(--muted);
+  padding: 6px; min-width: 36px; min-height: 36px;
+  touch-action: manipulation; -webkit-tap-highlight-color: transparent;
+}
+.fav-btn.faved { color: var(--accent); }
+.card-body h2 { padding-right: 40px; }
+.fav-fab {
+  position: fixed; right: 20px; bottom: 24px; z-index: 10;
+  width: 56px; height: 56px; border-radius: 50%; border: none; cursor: pointer;
+  background: var(--accent); color: #fff; font-size: 1.5rem; line-height: 1;
+  box-shadow: 0 4px 16px rgba(0,0,0,.5);
+  touch-action: manipulation; -webkit-tap-highlight-color: transparent;
+}
+.fav-count {
+  position: absolute; top: -4px; right: -4px;
+  background: #fff; color: var(--accent);
+  font-size: .75rem; font-weight: 700; line-height: 1;
+  border-radius: 999px; padding: 4px 7px;
+}
+.fav-dialog {
+  background: var(--card); color: var(--text);
+  border: 1px solid #333; border-radius: 12px;
+  padding: 16px; width: min(480px, calc(100vw - 32px));
+  max-height: 70vh;
+}
+.fav-dialog::backdrop { background: rgba(0,0,0,.6); }
+.fav-dialog-head { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.fav-dialog-head h2 { margin: 0; font-size: 1.1rem; flex: 1; }
+.fav-copy {
+  background: var(--accent); color: #fff; border: none; border-radius: 999px;
+  padding: 8px 14px; font-size: .85rem; cursor: pointer;
+}
+.fav-close {
+  background: none; border: none; color: var(--muted);
+  font-size: 1.1rem; cursor: pointer; padding: 6px;
+}
+.fav-items { list-style: none; margin: 0; padding: 0; overflow-y: auto; }
+.fav-items li {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 0; border-bottom: 1px solid #2a2a33;
+}
+.fav-items li:last-child { border-bottom: none; }
+.fav-item-text { flex: 1; min-width: 0; }
+.fav-item-text strong { display: block; font-size: .95rem; }
+.fav-item-en { color: var(--muted); font-size: .8rem; margin-right: 8px; }
+.fav-item-text a { color: var(--accent); font-size: .8rem; text-decoration: none; }
+.fav-remove {
+  background: none; border: none; color: var(--muted); cursor: pointer;
+  font-size: .95rem; padding: 8px; flex: none;
+}
+.fav-empty { color: var(--muted); }
 .error { color: var(--accent); text-align: center; }
 @media (max-width: 600px) {
   .card { grid-template-columns: 1fr; }

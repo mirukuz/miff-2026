@@ -4,6 +4,26 @@ let sortKey = 'imdb';
 
 const $list = document.getElementById('film-list');
 
+// —— 想看列表：只存 slug 数组在 localStorage，片名/链接渲染时从 films.json 现查 ——
+const WATCHLIST_KEY = 'miff2026-watchlist';
+
+function loadWatchlist() {
+  try { return new Set(JSON.parse(localStorage.getItem(WATCHLIST_KEY)) ?? []); }
+  catch { return new Set(); }
+}
+const watchlist = loadWatchlist();
+
+function saveWatchlist() {
+  localStorage.setItem(WATCHLIST_KEY, JSON.stringify([...watchlist]));
+  updateFab();
+}
+
+function updateFab() {
+  const fab = document.getElementById('fav-fab');
+  fab.hidden = watchlist.size === 0;
+  document.getElementById('fav-count').textContent = watchlist.size;
+}
+
 const ratingOf = (f, key) =>
   key === 'douban' ? f.douban?.rating ?? null :
   key === 'imdb' ? f.imdb?.rating ?? null : null;
@@ -67,9 +87,11 @@ function card(f) {
   const posterHtml = f.poster
     ? `<img class="poster" src="${esc(f.poster)}" alt="${esc(f.title_zh ?? f.title_en)} 海报" loading="lazy">`
     : '<div class="poster poster-empty"></div>';
+  const faved = watchlist.has(f.slug);
   return `<article class="card" data-slug="${esc(f.slug)}">
     ${posterHtml}
     <div class="card-body">
+      <button class="fav-btn${faved ? ' faved' : ''}" aria-label="${faved ? '移出想看' : '加入想看'}" aria-pressed="${faved}">${faved ? '♥' : '♡'}</button>
       <h2>${esc(f.title_zh ?? f.title_en)}</h2>
       <p class="title-en">${esc(f.title_en)}</p>
       ${badges(f, doubanUrl, imdbUrl)}
@@ -92,7 +114,22 @@ document.getElementById('sort-bar').addEventListener('click', (e) => {
   render();
 });
 
+function toggleFav(slug, btn) {
+  const faved = !watchlist.has(slug);
+  faved ? watchlist.add(slug) : watchlist.delete(slug);
+  saveWatchlist();
+  btn.classList.toggle('faved', faved);
+  btn.textContent = faved ? '♥' : '♡';
+  btn.setAttribute('aria-label', faved ? '移出想看' : '加入想看');
+  btn.setAttribute('aria-pressed', faved);
+}
+
 $list.addEventListener('click', (e) => {
+  const favBtn = e.target.closest('.fav-btn');
+  if (favBtn) {                              // 点心形只切换收藏，不展开卡片
+    toggleFav(favBtn.closest('.card').dataset.slug, favBtn);
+    return;
+  }
   if (e.target.closest('a')) return;         // 点外链不触发展开
   const cardEl = e.target.closest('.card');
   if (!cardEl) return;
@@ -105,6 +142,66 @@ $list.addEventListener('click', (e) => {
   d.hidden = !d.hidden;
 });
 
+// —— 想看弹窗 ——
+const $dialog = document.getElementById('fav-dialog');
+
+function favFilms() {
+  return [...watchlist].map((slug) => bySlug.get(slug)).filter(Boolean);
+}
+
+function renderDialog() {
+  const items = favFilms().map((f) => `<li data-slug="${esc(f.slug)}">
+    <div class="fav-item-text">
+      <strong>${esc(f.title_zh ?? f.title_en)}</strong>
+      <span class="fav-item-en">${esc(f.title_en)}</span>
+      ${safeUrl(f.miff_url) ? `<a href="${esc(f.miff_url)}" target="_blank" rel="noopener">MIFF ↗</a>` : ''}
+    </div>
+    <button class="fav-remove" aria-label="移出想看">✕</button>
+  </li>`);
+  document.getElementById('fav-items').innerHTML =
+    items.join('') || '<li class="fav-empty">还没有收藏，点卡片上的 ♡ 加入想看</li>';
+}
+
+document.getElementById('fav-fab').addEventListener('click', () => {
+  renderDialog();
+  $dialog.showModal();
+});
+
+document.getElementById('fav-close').addEventListener('click', () => $dialog.close());
+$dialog.addEventListener('click', (e) => {   // 点弹窗外的遮罩关闭
+  if (e.target === $dialog) $dialog.close();
+});
+
+document.getElementById('fav-items').addEventListener('click', (e) => {
+  const btn = e.target.closest('.fav-remove');
+  if (!btn) return;
+  const slug = btn.closest('li').dataset.slug;
+  watchlist.delete(slug);
+  saveWatchlist();
+  renderDialog();
+  const cardBtn = $list.querySelector(`.card[data-slug="${CSS.escape(slug)}"] .fav-btn`);
+  if (cardBtn) {
+    cardBtn.classList.remove('faved');
+    cardBtn.textContent = '♡';
+    cardBtn.setAttribute('aria-pressed', 'false');
+  }
+  if (watchlist.size === 0) $dialog.close();
+});
+
+document.getElementById('fav-copy').addEventListener('click', async (e) => {
+  const text = favFilms()
+    .map((f) => `${f.title_zh ?? f.title_en}（${f.title_en}）\n${f.miff_url ?? ''}`.trim())
+    .join('\n\n');
+  const btn = e.currentTarget;
+  try {
+    await navigator.clipboard.writeText(text);
+    btn.textContent = '已复制 ✓';
+  } catch {
+    btn.textContent = '复制失败';
+  }
+  setTimeout(() => { btn.textContent = '复制片单'; }, 1500);
+});
+
 fetch('films.json')
   .then((r) => r.json())
   .then((data) => {
@@ -112,6 +209,7 @@ fetch('films.json')
     bySlug = new Map(data.map((f) => [f.slug, f]));
     document.getElementById('notice').textContent = `共 ${films.length} 部影片`;
     render();
+    updateFab();
   })
   .catch(() => {
     $list.innerHTML = '<p class="error">片单加载失败，请刷新重试。</p>';

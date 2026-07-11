@@ -2,6 +2,7 @@ const STEPS = {
   scrape: async () => (await import('./scrape-miff.mjs')).scrape(),
   imdb: async () => (await import('./enrich-imdb.mjs')).enrich(),
   douban: async () => (await import('./enrich-douban.mjs')).enrich(),
+  rt: async () => (await import('./enrich-rt.mjs')).enrich(),
   translate: async () => (await import('./translate.mjs')).translate(),
 };
 

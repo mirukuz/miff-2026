@@ -40,6 +40,7 @@ body {
 .badge { font-size: .8rem; font-weight: 700; padding: 4px 8px; border-radius: 4px; color: #000; display: inline-block; }
 .badge.douban { background: var(--douban); color: #fff; }
 .badge.imdb { background: var(--imdb); }
+.badge.rt { background: #fa320a; color: #fff; }
 .badge.none { background: #333; color: var(--muted); font-weight: 400; }
 .highlight { font-size: .92rem; margin: 6px 0; }
 .meta { color: var(--muted); font-size: .8rem; margin: 4px 0; display: flex; justify-content: space-between; align-items: center; gap: 8px; }

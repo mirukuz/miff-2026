@@ -102,7 +102,9 @@ async function translateFilm(f) {
 export async function translate() {
   mkdirSync(CACHE_DIR, { recursive: true });
   mkdirSync('site', { recursive: true });
-  const raw = JSON.parse(readFileSync('data/enriched-douban.json', 'utf8'));
+  // rt 步骤可能被单独跳过（--step=translate），此时退回豆瓣产物，rt 字段为空
+  const source = existsSync('data/enriched-rt.json') ? 'data/enriched-rt.json' : 'data/enriched-douban.json';
+  const raw = JSON.parse(readFileSync(source, 'utf8'));
   const out = [];
   const errors = [];
   for (const [i, f] of raw.films.entries()) {
@@ -129,6 +131,7 @@ export async function translate() {
       miff_url: f.miff_url,
       imdb: f.imdb,
       douban: f.douban,
+      rt: f.rt ?? null,
       sessions: [],   // 7月16日排片预留
     });
   }

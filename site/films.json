@@ -28,6 +28,9 @@
       "url": "https://movie.douban.com/subject/36117429/",
       "search_url": "https://www.douban.com/search?cat=1002&q=29%20Hour%20Long%20Birthday"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=29%20Hour%20Long%20Birthday"
+    },
     "sessions": []
   },
   {
@@ -60,6 +63,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=9%20Temples%20to%20Heaven",
       "title_zh": "九庙上天堂"
     },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/9_temples_to_heaven",
+      "search_url": "https://www.rottentomatoes.com/search?search=9%20Temples%20to%20Heaven"
+    },
     "sessions": []
   },
   {
@@ -82,6 +91,9 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Accelerator%20Shorts%201"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Accelerator%20Shorts%201"
+    },
     "sessions": []
   },
   {
@@ -103,6 +115,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Accelerator%20Shorts%202"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Accelerator%20Shorts%202"
     },
     "sessions": []
   },
@@ -136,6 +151,9 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Acetone%20Reality",
       "title_zh": "丙酮现实"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Acetone%20Reality"
+    },
     "sessions": []
   },
   {
@@ -167,6 +185,12 @@
       "url": "https://movie.douban.com/subject/36529570/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Adam%E2%80%99s%20Apple",
       "title_zh": "亚当的苹果"
+    },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/adams_apple",
+      "search_url": "https://www.rottentomatoes.com/search?search=Adam%E2%80%99s%20Apple"
     },
     "sessions": []
   },
@@ -200,6 +224,9 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Ah%20Girl",
       "title_zh": "泡泡糖女孩"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Ah%20Girl"
+    },
     "sessions": []
   },
   {
@@ -226,6 +253,9 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Airport%20Chaplain"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Airport%20Chaplain"
     },
     "sessions": []
   },
@@ -254,6 +284,12 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=All%20of%20a%20Sudden"
     },
+    "rt": {
+      "critics_score": 100,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/all_of_a_sudden_2026",
+      "search_url": "https://www.rottentomatoes.com/search?search=All%20of%20a%20Sudden"
+    },
     "sessions": []
   },
   {
@@ -280,6 +316,12 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=All%20The%20Lovers%20In%20The%20Night"
+    },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/all_the_lovers_in_the_night",
+      "search_url": "https://www.rottentomatoes.com/search?search=All%20The%20Lovers%20In%20The%20Night"
     },
     "sessions": []
   },
@@ -313,6 +355,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=American%20Doctor",
       "title_zh": "美国医生"
     },
+    "rt": {
+      "critics_score": 100,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/american_doctor",
+      "search_url": "https://www.rottentomatoes.com/search?search=American%20Doctor"
+    },
     "sessions": []
   },
   {
@@ -345,6 +393,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Aniki-B%C3%B3b%C3%B3",
       "title_zh": "点指兵兵"
     },
+    "rt": {
+      "critics_score": null,
+      "audience_score": 88,
+      "url": "https://www.rottentomatoes.com/m/aniki-bobo-1942",
+      "search_url": "https://www.rottentomatoes.com/search?search=Aniki-B%C3%B3b%C3%B3"
+    },
     "sessions": []
   },
   {
@@ -366,6 +420,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Animation%20Shorts"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Animation%20Shorts"
     },
     "sessions": []
   },
@@ -394,6 +451,9 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=AnyMart"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=AnyMart"
+    },
     "sessions": []
   },
   {
@@ -415,6 +475,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Armani%20Beauty%20Cinema%20Club%20Opening%20Night%3A%20Wishful%20Thinking"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Armani%20Beauty%20Cinema%20Club%20Opening%20Night%3A%20Wishful%20Thinking"
     },
     "sessions": []
   },
@@ -448,6 +511,9 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Aro%20berria",
       "title_zh": "新纪元祭"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Aro%20berria"
+    },
     "sessions": []
   },
   {
@@ -474,6 +540,9 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Arrival"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Arrival"
     },
     "sessions": []
   },
@@ -507,6 +576,9 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=As%20Told%20by%20a%20Corpse",
       "title_zh": "如尸体所述"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=As%20Told%20by%20a%20Corpse"
+    },
     "sessions": []
   },
   {
@@ -539,6 +611,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Atonement",
       "title_zh": "求恕者"
     },
+    "rt": {
+      "critics_score": 92,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/atonement_2026",
+      "search_url": "https://www.rottentomatoes.com/search?search=Atonement"
+    },
     "sessions": []
   },
   {
@@ -570,6 +648,9 @@
       "url": "https://movie.douban.com/subject/37935338/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Au%20hasard"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Au%20hasard"
+    },
     "sessions": []
   },
   {
@@ -591,6 +672,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Australian%20Shorts"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Australian%20Shorts"
     },
     "sessions": []
   },
@@ -619,6 +703,9 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Auto%20Queens"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Auto%20Queens"
+    },
     "sessions": []
   },
   {
@@ -646,6 +733,9 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Awake%20Before%20Your%20Gaze"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Awake%20Before%20Your%20Gaze"
+    },
     "sessions": []
   },
   {
@@ -671,6 +761,9 @@
       "votes": null,
       "url": "https://movie.douban.com/subject/38365253/",
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Awake"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Awake"
     },
     "sessions": []
   },
@@ -703,6 +796,9 @@
       "url": "https://movie.douban.com/subject/36728202/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Back%20Home"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Back%20Home"
+    },
     "sessions": []
   },
   {
@@ -733,6 +829,9 @@
       "votes": null,
       "url": "https://movie.douban.com/subject/37447618/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Balconada"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Balconada"
     },
     "sessions": []
   },
@@ -766,6 +865,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Barbara%20Forever",
       "title_zh": "永远的芭芭拉"
     },
+    "rt": {
+      "critics_score": 100,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/barbara_forever",
+      "search_url": "https://www.rottentomatoes.com/search?search=Barbara%20Forever"
+    },
     "sessions": []
   },
   {
@@ -798,6 +903,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Bell%2C%20Book%20and%20Candle",
       "title_zh": "夺情记"
     },
+    "rt": {
+      "critics_score": 81,
+      "audience_score": 66,
+      "url": "https://www.rottentomatoes.com/m/bell_book_and_candle",
+      "search_url": "https://www.rottentomatoes.com/search?search=Bell%2C%20Book%20and%20Candle"
+    },
     "sessions": []
   },
   {
@@ -824,6 +935,12 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Beloved"
+    },
+    "rt": {
+      "critics_score": 87,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/the_beloved_2026",
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Beloved"
     },
     "sessions": []
   },
@@ -857,6 +974,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Ben%E2%80%99Imana",
       "title_zh": "神之子"
     },
+    "rt": {
+      "critics_score": 100,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/benimana",
+      "search_url": "https://www.rottentomatoes.com/search?search=Ben%E2%80%99Imana"
+    },
     "sessions": []
   },
   {
@@ -878,6 +1001,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Best%20MIFF%20Shorts"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Best%20MIFF%20Shorts"
     },
     "sessions": []
   },
@@ -910,6 +1036,12 @@
       "url": "https://movie.douban.com/subject/37925641/",
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Best%20Summer"
     },
+    "rt": {
+      "critics_score": 79,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/the_best_summer",
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Best%20Summer"
+    },
     "sessions": []
   },
   {
@@ -936,6 +1068,12 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Better%20Go%20Mad%20in%20the%20Wild"
+    },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/better_go_mad_in_the_wild",
+      "search_url": "https://www.rottentomatoes.com/search?search=Better%20Go%20Mad%20in%20the%20Wild"
     },
     "sessions": []
   },
@@ -969,6 +1107,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Big%20Girls%20Don%E2%80%99t%20Cry",
       "title_zh": "大女孩不哭"
     },
+    "rt": {
+      "critics_score": 100,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/big_girls_dont_cry_2026",
+      "search_url": "https://www.rottentomatoes.com/search?search=Big%20Girls%20Don%E2%80%99t%20Cry"
+    },
     "sessions": []
   },
   {
@@ -995,6 +1139,12 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Bitter%20Christmas"
+    },
+    "rt": {
+      "critics_score": 89,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/bitter_christmas",
+      "search_url": "https://www.rottentomatoes.com/search?search=Bitter%20Christmas"
     },
     "sessions": []
   },
@@ -1023,6 +1173,12 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Black%20God%2C%20White%20Devil"
     },
+    "rt": {
+      "critics_score": 100,
+      "audience_score": 79,
+      "url": "https://www.rottentomatoes.com/m/black_god_white_devil",
+      "search_url": "https://www.rottentomatoes.com/search?search=Black%20God%2C%20White%20Devil"
+    },
     "sessions": []
   },
   {
@@ -1049,6 +1205,12 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Blood%20Countess"
+    },
+    "rt": {
+      "critics_score": 85,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/the_blood_countess",
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Blood%20Countess"
     },
     "sessions": []
   },
@@ -1082,6 +1244,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Blue%20Heron",
       "title_zh": "蓝鹭"
     },
+    "rt": {
+      "critics_score": 98,
+      "audience_score": 69,
+      "url": "https://www.rottentomatoes.com/m/blue_heron",
+      "search_url": "https://www.rottentomatoes.com/search?search=Blue%20Heron"
+    },
     "sessions": []
   },
   {
@@ -1108,6 +1276,9 @@
       "url": "https://movie.douban.com/subject/37935354/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Body%2C%20remember%E2%80%A6",
       "title_zh": "记住吧，肉体..."
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Body%2C%20remember%E2%80%A6"
     },
     "sessions": []
   },
@@ -1141,6 +1312,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Body%20Blow",
       "title_zh": "身体重击"
     },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/body_blow_2025",
+      "search_url": "https://www.rottentomatoes.com/search?search=Body%20Blow"
+    },
     "sessions": []
   },
   {
@@ -1172,6 +1349,9 @@
       "url": "https://movie.douban.com/subject/37310182/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Boss%20Cat",
       "title_zh": "猫老大"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Boss%20Cat"
     },
     "sessions": []
   },
@@ -1205,6 +1385,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Bouchra",
       "title_zh": "布莎拉"
     },
+    "rt": {
+      "critics_score": 75,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/bouchra",
+      "search_url": "https://www.rottentomatoes.com/search?search=Bouchra"
+    },
     "sessions": []
   },
   {
@@ -1236,6 +1422,12 @@
       "url": "https://movie.douban.com/subject/37147142/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Boundaries",
       "title_zh": "边界"
+    },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/boundaries_2024",
+      "search_url": "https://www.rottentomatoes.com/search?search=Boundaries"
     },
     "sessions": []
   },
@@ -1269,6 +1461,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Broken%20English",
       "title_zh": "玛丽安娜·菲斯福尔：破碎重生"
     },
+    "rt": {
+      "critics_score": 92,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/broken_english_2025",
+      "search_url": "https://www.rottentomatoes.com/search?search=Broken%20English"
+    },
     "sessions": []
   },
   {
@@ -1295,6 +1493,9 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=By%20the%20Faith%20of%20Jos%C3%A9%20Ger%C3%B3nimo"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=By%20the%20Faith%20of%20Jos%C3%A9%20Ger%C3%B3nimo"
     },
     "sessions": []
   },
@@ -1328,6 +1529,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Can%20She%20Bake%20a%20Cherry%20Pie%3F",
       "title_zh": "她会烤樱桃派吗？"
     },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/can_she_bake_a_cherry_pie",
+      "search_url": "https://www.rottentomatoes.com/search?search=Can%20She%20Bake%20a%20Cherry%20Pie%3F"
+    },
     "sessions": []
   },
   {
@@ -1349,6 +1556,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Carn%20the%20Chinese!"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Carn%20the%20Chinese!"
     },
     "sessions": []
   },
@@ -1382,6 +1592,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Chili%20Finger",
       "title_zh": "辣酱指头"
     },
+    "rt": {
+      "critics_score": 80,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/chili_finger",
+      "search_url": "https://www.rottentomatoes.com/search?search=Chili%20Finger"
+    },
     "sessions": []
   },
   {
@@ -1409,6 +1625,12 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Chimney%20Town%3A%20Frozen%20in%20Time"
     },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/chimney_town_frozen_in_time",
+      "search_url": "https://www.rottentomatoes.com/search?search=Chimney%20Town%3A%20Frozen%20in%20Time"
+    },
     "sessions": []
   },
   {
@@ -1435,6 +1657,12 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Chronicles%20From%20the%20Siege"
+    },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/chronicles_from_the_siege",
+      "search_url": "https://www.rottentomatoes.com/search?search=Chronicles%20From%20the%20Siege"
     },
     "sessions": []
   },
@@ -1468,6 +1696,9 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Chronovisor",
       "title_zh": "时观器"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Chronovisor"
+    },
     "sessions": []
   },
   {
@@ -1489,6 +1720,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Cinema%20of%20Spectacle%3A%20Experimental%20Visions"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Cinema%20of%20Spectacle%3A%20Experimental%20Visions"
     },
     "sessions": []
   },
@@ -1522,6 +1756,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Clarissa",
       "title_zh": "克拉丽莎"
     },
+    "rt": {
+      "critics_score": 100,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/clarissa",
+      "search_url": "https://www.rottentomatoes.com/search?search=Clarissa"
+    },
     "sessions": []
   },
   {
@@ -1554,6 +1794,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Closure",
       "title_zh": "止水之询"
     },
+    "rt": {
+      "critics_score": 100,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/closure_2026",
+      "search_url": "https://www.rottentomatoes.com/search?search=Closure"
+    },
     "sessions": []
   },
   {
@@ -1575,6 +1821,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Clouds%20Are%20Two%20Thousand%20Meters%20Up"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Clouds%20Are%20Two%20Thousand%20Meters%20Up"
     },
     "sessions": []
   },
@@ -1601,6 +1850,9 @@
       "votes": null,
       "url": "https://movie.douban.com/subject/37935413/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Coconut"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Coconut"
     },
     "sessions": []
   },
@@ -1634,6 +1886,9 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Congo%20Boy",
       "title_zh": "刚果男孩"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Congo%20Boy"
+    },
     "sessions": []
   },
   {
@@ -1653,6 +1908,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Consuming%20Culture"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Consuming%20Culture"
     },
     "sessions": []
   },
@@ -1685,6 +1943,12 @@
       "url": "https://movie.douban.com/subject/38400702/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Corpus"
     },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/corpus",
+      "search_url": "https://www.rottentomatoes.com/search?search=Corpus"
+    },
     "sessions": []
   },
   {
@@ -1706,6 +1970,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=%C3%89cosyst%C3%A8me"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=%C3%89cosyst%C3%A8me"
     },
     "sessions": []
   },
@@ -1739,6 +2006,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Coward",
       "title_zh": "懦夫"
     },
+    "rt": {
+      "critics_score": 92,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/coward_2026",
+      "search_url": "https://www.rottentomatoes.com/search?search=Coward"
+    },
     "sessions": []
   },
   {
@@ -1765,6 +2038,12 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Coyote%20vs.%20ACME"
+    },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/coyote_vs_acme",
+      "search_url": "https://www.rottentomatoes.com/search?search=Coyote%20vs.%20ACME"
     },
     "sessions": []
   },
@@ -1798,6 +2077,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Coyotes",
       "title_zh": "郊狼"
     },
+    "rt": {
+      "critics_score": 58,
+      "audience_score": 25,
+      "url": "https://www.rottentomatoes.com/m/coyotes_2025",
+      "search_url": "https://www.rottentomatoes.com/search?search=Coyotes"
+    },
     "sessions": []
   },
   {
@@ -1830,6 +2115,9 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Crocodile",
       "title_zh": "鳄城少年"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Crocodile"
+    },
     "sessions": []
   },
   {
@@ -1856,6 +2144,12 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Currents"
+    },
+    "rt": {
+      "critics_score": 97,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/the_currents",
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Currents"
     },
     "sessions": []
   },
@@ -1889,6 +2183,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Cycle%20of%20Love",
       "title_zh": "身骑白马"
     },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/the_cycle_of_love",
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Cycle%20of%20Love"
+    },
     "sessions": []
   },
   {
@@ -1920,6 +2220,9 @@
       "url": "https://movie.douban.com/subject/38491316/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Daddy%E2%80%99s%20Little%20Meatball"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Daddy%E2%80%99s%20Little%20Meatball"
+    },
     "sessions": []
   },
   {
@@ -1946,6 +2249,12 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Dao"
+    },
+    "rt": {
+      "critics_score": 83,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/dao_2026",
+      "search_url": "https://www.rottentomatoes.com/search?search=Dao"
     },
     "sessions": []
   },
@@ -1979,6 +2288,9 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Daria%E2%80%99s%20Night%20Flowers",
       "title_zh": "达莉亚的夜花档案"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Daria%E2%80%99s%20Night%20Flowers"
+    },
     "sessions": []
   },
   {
@@ -2011,6 +2323,9 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Daughters%20of%20the%20Late%20Colonel",
       "title_zh": "已故上校的女儿们"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Daughters%20of%20the%20Late%20Colonel"
+    },
     "sessions": []
   },
   {
@@ -2042,6 +2357,9 @@
       "url": "https://movie.douban.com/subject/37303779/",
       "search_url": "https://www.douban.com/search?cat=1002&q=David%20Bowie%20Is%20Dead"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=David%20Bowie%20Is%20Dead"
+    },
     "sessions": []
   },
   {
@@ -2068,6 +2386,12 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Day%20She%20Returns"
+    },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/the_day_she_returns",
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Day%20She%20Returns"
     },
     "sessions": []
   },
@@ -2101,6 +2425,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Dead%20Man%E2%80%99s%20Wire",
       "title_zh": "死人开关"
     },
+    "rt": {
+      "critics_score": 92,
+      "audience_score": 77,
+      "url": "https://www.rottentomatoes.com/m/dead_mans_wire",
+      "search_url": "https://www.rottentomatoes.com/search?search=Dead%20Man%E2%80%99s%20Wire"
+    },
     "sessions": []
   },
   {
@@ -2122,6 +2452,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Dead%20Tongue"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Dead%20Tongue"
     },
     "sessions": []
   },
@@ -2154,6 +2487,9 @@
       "url": "https://movie.douban.com/subject/35018454/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Dear%20Marianne"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Dear%20Marianne"
+    },
     "sessions": []
   },
   {
@@ -2179,6 +2515,9 @@
       "votes": null,
       "url": "https://movie.douban.com/subject/37474362/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Death%20of%20a%20Shaman"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Death%20of%20a%20Shaman"
     },
     "sessions": []
   },
@@ -2212,6 +2551,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Decorado",
       "title_zh": "楚门之鼠"
     },
+    "rt": {
+      "critics_score": 89,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/decorado_2025",
+      "search_url": "https://www.rottentomatoes.com/search?search=Decorado"
+    },
     "sessions": []
   },
   {
@@ -2238,6 +2583,9 @@
       "url": "https://movie.douban.com/subject/38215147/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Despite%20the%20Night"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Despite%20the%20Night"
+    },
     "sessions": []
   },
   {
@@ -2259,6 +2607,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Diary%20of%20a%20Chambermaid"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Diary%20of%20a%20Chambermaid"
     },
     "sessions": []
   },
@@ -2290,6 +2641,9 @@
       "votes": null,
       "url": "https://movie.douban.com/subject/37474363/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Digby%20%26%20Camille"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Digby%20%26%20Camille"
     },
     "sessions": []
   },
@@ -2323,6 +2677,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Do%20You%20Love%20Me",
       "title_zh": "你爱我吗？"
     },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/do_you_love_me_2025",
+      "search_url": "https://www.rottentomatoes.com/search?search=Do%20You%20Love%20Me"
+    },
     "sessions": []
   },
   {
@@ -2345,6 +2705,9 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Documentary%20Shorts%201"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Documentary%20Shorts%201"
+    },
     "sessions": []
   },
   {
@@ -2366,6 +2729,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Documentary%20Shorts%202"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Documentary%20Shorts%202"
     },
     "sessions": []
   },
@@ -2399,6 +2765,9 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=A%20Dog%20Called%20Discord",
       "title_zh": "一只名叫迪斯科德的狗"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=A%20Dog%20Called%20Discord"
+    },
     "sessions": []
   },
   {
@@ -2430,6 +2799,9 @@
       "url": "https://movie.douban.com/subject/38392334/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Dogs%20and%20Dust"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Dogs%20and%20Dust"
+    },
     "sessions": []
   },
   {
@@ -2456,6 +2828,9 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Dollhouse"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Dollhouse"
     },
     "sessions": []
   },
@@ -2484,6 +2859,9 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Dorian%20Gray%20in%20the%20Mirror%20of%20the%20Yellow%20Press"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Dorian%20Gray%20in%20the%20Mirror%20of%20the%20Yellow%20Press"
+    },
     "sessions": []
   },
   {
@@ -2510,6 +2888,12 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Double%20Freedom"
+    },
+    "rt": {
+      "critics_score": 100,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/double_freedom",
+      "search_url": "https://www.rottentomatoes.com/search?search=Double%20Freedom"
     },
     "sessions": []
   },
@@ -2538,6 +2922,12 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Dreamed%20Adventure"
     },
+    "rt": {
+      "critics_score": 94,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/the_dreamed_adventure",
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Dreamed%20Adventure"
+    },
     "sessions": []
   },
   {
@@ -2565,6 +2955,12 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Dry%20Leaf"
     },
+    "rt": {
+      "critics_score": 82,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/dry_leaf",
+      "search_url": "https://www.rottentomatoes.com/search?search=Dry%20Leaf"
+    },
     "sessions": []
   },
   {
@@ -2586,6 +2982,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Dya%20(Country)"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Dya%20(Country)"
     },
     "sessions": []
   },
@@ -2619,6 +3018,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Education%20of%20Jane%20Cumming",
       "title_zh": "稚恶谣诼"
     },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/the_education_of_jane_cumming",
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Education%20of%20Jane%20Cumming"
+    },
     "sessions": []
   },
   {
@@ -2650,6 +3055,12 @@
       "url": "https://movie.douban.com/subject/38208082/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Eight%20Bridges",
       "title_zh": "八座桥"
+    },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/eight_bridges",
+      "search_url": "https://www.rottentomatoes.com/search?search=Eight%20Bridges"
     },
     "sessions": []
   },
@@ -2683,6 +3094,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Elephants%20in%20the%20Fog",
       "title_zh": "雾中的大象"
     },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/elephants_in_the_fog",
+      "search_url": "https://www.rottentomatoes.com/search?search=Elephants%20in%20the%20Fog"
+    },
     "sessions": []
   },
   {
@@ -2714,6 +3131,12 @@
       "url": "https://movie.douban.com/subject/26365744/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Embargo"
     },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/the_embargo_project",
+      "search_url": "https://www.rottentomatoes.com/search?search=Embargo"
+    },
     "sessions": []
   },
   {
@@ -2740,6 +3163,9 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Enchantment%20of%20the%20Blue%20Sailors"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Enchantment%20of%20the%20Blue%20Sailors"
     },
     "sessions": []
   },
@@ -2773,6 +3199,9 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20End",
       "title_zh": "最后一程"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20End"
+    },
     "sessions": []
   },
   {
@@ -2805,6 +3234,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Erupcja",
       "title_zh": "爆发"
     },
+    "rt": {
+      "critics_score": 83,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/erupcja",
+      "search_url": "https://www.rottentomatoes.com/search?search=Erupcja"
+    },
     "sessions": []
   },
   {
@@ -2835,6 +3270,9 @@
       "votes": null,
       "url": "https://movie.douban.com/subject/35018457/",
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Essential%20Cornishman"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Essential%20Cornishman"
     },
     "sessions": []
   },
@@ -2868,6 +3306,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Eureka",
       "title_zh": "尤里卡"
     },
+    "rt": {
+      "critics_score": 83,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/eureka_2023",
+      "search_url": "https://www.rottentomatoes.com/search?search=Eureka"
+    },
     "sessions": []
   },
   {
@@ -2899,6 +3343,12 @@
       "url": "https://movie.douban.com/subject/37105480/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Everybody%20Digs%20Bill%20Evans",
       "title_zh": "人人都爱比尔·埃文斯"
+    },
+    "rt": {
+      "critics_score": 100,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/everybody_digs_bill_evans",
+      "search_url": "https://www.rottentomatoes.com/search?search=Everybody%20Digs%20Bill%20Evans"
     },
     "sessions": []
   },
@@ -2932,6 +3382,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Everybody%20to%20Kenmure%20Street",
       "title_zh": "全员奔赴肯缪尔街"
     },
+    "rt": {
+      "critics_score": 100,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/everybody_to_kenmure_street",
+      "search_url": "https://www.rottentomatoes.com/search?search=Everybody%20to%20Kenmure%20Street"
+    },
     "sessions": []
   },
   {
@@ -2953,6 +3409,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Everything%20You%20Own"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Everything%20You%20Own"
     },
     "sessions": []
   },
@@ -2986,6 +3445,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Everytime",
       "title_zh": "每时每刻"
     },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/everytime",
+      "search_url": "https://www.rottentomatoes.com/search?search=Everytime"
+    },
     "sessions": []
   },
   {
@@ -3007,6 +3472,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Experimental%20Shorts"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Experimental%20Shorts"
     },
     "sessions": []
   },
@@ -3030,6 +3498,9 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Extra%20Geography"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Extra%20Geography"
+    },
     "sessions": []
   },
   {
@@ -3052,6 +3523,9 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Facing%20the%20Numbers"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Facing%20the%20Numbers"
+    },
     "sessions": []
   },
   {
@@ -3073,6 +3547,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Family%20Gala%3A%20Forgotten%20Island"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Family%20Gala%3A%20Forgotten%20Island"
     },
     "sessions": []
   },
@@ -3106,6 +3583,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Fantasma",
       "title_zh": "幻影旅程"
     },
+    "rt": {
+      "critics_score": null,
+      "audience_score": 64,
+      "url": "https://www.rottentomatoes.com/m/fantasma",
+      "search_url": "https://www.rottentomatoes.com/search?search=Fantasma"
+    },
     "sessions": []
   },
   {
@@ -3138,6 +3621,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Fatherland",
       "title_zh": "故土"
     },
+    "rt": {
+      "critics_score": 95,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/fatherland_2026",
+      "search_url": "https://www.rottentomatoes.com/search?search=Fatherland"
+    },
     "sessions": []
   },
   {
@@ -3168,6 +3657,9 @@
       "votes": null,
       "url": "https://movie.douban.com/subject/37424750/",
       "search_url": "https://www.douban.com/search?cat=1002&q=FELT"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=FELT"
     },
     "sessions": []
   },
@@ -3200,6 +3692,12 @@
       "url": "https://movie.douban.com/subject/38351968/",
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Fence"
     },
+    "rt": {
+      "critics_score": 70,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/the_fence_2025",
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Fence"
+    },
     "sessions": []
   },
   {
@@ -3221,6 +3719,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Fertile%20Ground"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Fertile%20Ground"
     },
     "sessions": []
   },
@@ -3254,6 +3755,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Filipi%C3%B1ana",
       "title_zh": "菲律宾女孩"
     },
+    "rt": {
+      "critics_score": 90,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/filipinana_2026",
+      "search_url": "https://www.rottentomatoes.com/search?search=Filipi%C3%B1ana"
+    },
     "sessions": []
   },
   {
@@ -3276,6 +3783,9 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Fingerbang"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Fingerbang"
+    },
     "sessions": []
   },
   {
@@ -3297,6 +3807,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Firestorm"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Firestorm"
     },
     "sessions": []
   },
@@ -3325,6 +3838,12 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Flesh%20and%20Fuel"
     },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/flesh_and_fuel",
+      "search_url": "https://www.rottentomatoes.com/search?search=Flesh%20and%20Fuel"
+    },
     "sessions": []
   },
   {
@@ -3351,6 +3870,9 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Flesh%20Fruit"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Flesh%20Fruit"
     },
     "sessions": []
   },
@@ -3379,6 +3901,12 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Flies"
     },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/flies_2026",
+      "search_url": "https://www.rottentomatoes.com/search?search=Flies"
+    },
     "sessions": []
   },
   {
@@ -3400,6 +3928,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Footy%20Shorts"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Footy%20Shorts"
     },
     "sessions": []
   },
@@ -3423,6 +3954,9 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Footy%20Shorts%20Premiere"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Footy%20Shorts%20Premiere"
+    },
     "sessions": []
   },
   {
@@ -3444,6 +3978,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=For%20the%20Boys"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=For%20the%20Boys"
     },
     "sessions": []
   },
@@ -3471,6 +4008,9 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=For%20the%20Opponents"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=For%20the%20Opponents"
     },
     "sessions": []
   },
@@ -3504,6 +4044,9 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Forever%E2%80%A6Forever",
       "title_zh": "永远......永远"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Forever%E2%80%A6Forever"
+    },
     "sessions": []
   },
   {
@@ -3530,6 +4073,12 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Forever%20Your%20Maternal%20Animal"
+    },
+    "rt": {
+      "critics_score": 93,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/forever_your_maternal_animal",
+      "search_url": "https://www.rottentomatoes.com/search?search=Forever%20Your%20Maternal%20Animal"
     },
     "sessions": []
   },
@@ -3563,6 +4112,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Forgotten%20Island",
       "title_zh": "忘却之岛"
     },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/forgotten_island",
+      "search_url": "https://www.rottentomatoes.com/search?search=Forgotten%20Island"
+    },
     "sessions": []
   },
   {
@@ -3594,6 +4149,12 @@
       "url": "https://movie.douban.com/subject/36151519/",
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Fox",
       "title_zh": "狐言乱语"
+    },
+    "rt": {
+      "critics_score": 91,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/the_fox_2026",
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Fox"
     },
     "sessions": []
   },
@@ -3627,6 +4188,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Freak%20Orlando",
       "title_zh": "怪诞的奥兰多"
     },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/freak_orlando",
+      "search_url": "https://www.rottentomatoes.com/search?search=Freak%20Orlando"
+    },
     "sessions": []
   },
   {
@@ -3658,6 +4225,9 @@
       "url": "https://movie.douban.com/subject/38428043/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Free%20Eliza%20(notes%20on%20an%20anatomical%20imperfection)",
       "title_zh": "解放伊丽莎（解剖学缺陷札记）"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Free%20Eliza%20(notes%20on%20an%20anatomical%20imperfection)"
     },
     "sessions": []
   },
@@ -3691,6 +4261,9 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=French%20Girls",
       "title_zh": "法国女孩"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=French%20Girls"
+    },
     "sessions": []
   },
   {
@@ -3723,6 +4296,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Friend%E2%80%99s%20House%20Is%20Here",
       "title_zh": "友栖于此"
     },
+    "rt": {
+      "critics_score": 100,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/the_friends_house_is_here",
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Friend%E2%80%99s%20House%20Is%20Here"
+    },
     "sessions": []
   },
   {
@@ -3743,6 +4322,9 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Fulldome%20Showcase%20One"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Fulldome%20Showcase%20One"
+    },
     "sessions": []
   },
   {
@@ -3762,6 +4344,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Fulldome%20Showcase%20Two"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Fulldome%20Showcase%20Two"
     },
     "sessions": []
   },
@@ -3784,6 +4369,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=An%20Fylmow%20Berr%20%7C%20The%20Shorts%20of%20Mark%20Jenkin"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=An%20Fylmow%20Berr%20%7C%20The%20Shorts%20of%20Mark%20Jenkin"
     },
     "sessions": []
   },
@@ -3811,6 +4399,9 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=G.O.A.T"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=G.O.A.T"
     },
     "sessions": []
   },
@@ -3844,6 +4435,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Gabin",
       "title_zh": "加宾"
     },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/gabin",
+      "search_url": "https://www.rottentomatoes.com/search?search=Gabin"
+    },
     "sessions": []
   },
   {
@@ -3875,6 +4472,12 @@
       "url": "https://movie.douban.com/subject/37342631/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Gail%20Daughtry%20and%20the%20Celebrity%20Sex%20Pass",
       "title_zh": "盖尔·多尔蒂与名人豁免权"
+    },
+    "rt": {
+      "critics_score": 80,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/gail_daughtry_and_the_celebrity_sex_pass",
+      "search_url": "https://www.rottentomatoes.com/search?search=Gail%20Daughtry%20and%20the%20Celebrity%20Sex%20Pass"
     },
     "sessions": []
   },
@@ -3908,6 +4511,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Gentle%20Monster",
       "title_zh": "温柔的怪物"
     },
+    "rt": {
+      "critics_score": 62,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/gentle_monster",
+      "search_url": "https://www.rottentomatoes.com/search?search=Gentle%20Monster"
+    },
     "sessions": []
   },
   {
@@ -3940,6 +4549,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Ghost%20in%20the%20Cell",
       "title_zh": "牢笼鬼魂"
     },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/ghost_in_the_cell",
+      "search_url": "https://www.rottentomatoes.com/search?search=Ghost%20in%20the%20Cell"
+    },
     "sessions": []
   },
   {
@@ -3966,6 +4581,9 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=A%20Girl%20Unknown"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=A%20Girl%20Unknown"
     },
     "sessions": []
   },
@@ -3999,6 +4617,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Gone%20to%20Earth",
       "title_zh": "谪仙记"
     },
+    "rt": {
+      "critics_score": null,
+      "audience_score": 78,
+      "url": "https://www.rottentomatoes.com/m/gone_to_earth",
+      "search_url": "https://www.rottentomatoes.com/search?search=Gone%20to%20Earth"
+    },
     "sessions": []
   },
   {
@@ -4026,6 +4650,12 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Goodbye%2C%20Cruel%20World"
     },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/goodbye_cruel_world_2026",
+      "search_url": "https://www.rottentomatoes.com/search?search=Goodbye%2C%20Cruel%20World"
+    },
     "sessions": []
   },
   {
@@ -4052,6 +4682,9 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Guided%20by%20Horses"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Guided%20by%20Horses"
     },
     "sessions": []
   },
@@ -4085,6 +4718,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Ha-Chan%2C%20Shake%20Your%20Booty!",
       "title_zh": "小春，屁股摇起来！"
     },
+    "rt": {
+      "critics_score": 94,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/ha_chan_shake_your_booty",
+      "search_url": "https://www.rottentomatoes.com/search?search=Ha-Chan%2C%20Shake%20Your%20Booty!"
+    },
     "sessions": []
   },
   {
@@ -4111,6 +4750,9 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Hair%2C%20Paper%2C%20Water%E2%80%A6"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Hair%2C%20Paper%2C%20Water%E2%80%A6"
     },
     "sessions": []
   },
@@ -4143,6 +4785,9 @@
       "url": "https://movie.douban.com/subject/38242486/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Hard%20as%20Puck"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Hard%20as%20Puck"
+    },
     "sessions": []
   },
   {
@@ -4165,6 +4810,9 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Hear%20My%20Eyes%3A%20Memento"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Hear%20My%20Eyes%3A%20Memento"
+    },
     "sessions": []
   },
   {
@@ -4186,6 +4834,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Heart%20of%20the%20Forest"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Heart%20of%20the%20Forest"
     },
     "sessions": []
   },
@@ -4219,6 +4870,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Hen",
       "title_zh": "母鸡"
     },
+    "rt": {
+      "critics_score": 100,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/hen",
+      "search_url": "https://www.rottentomatoes.com/search?search=Hen"
+    },
     "sessions": []
   },
   {
@@ -4244,6 +4901,9 @@
       "votes": null,
       "url": "https://movie.douban.com/subject/36909284/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Her%20Silence"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Her%20Silence"
     },
     "sessions": []
   },
@@ -4277,6 +4937,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20History%20of%20Concrete",
       "title_zh": "混凝土简史"
     },
+    "rt": {
+      "critics_score": 100,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/the_history_of_concrete",
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20History%20of%20Concrete"
+    },
     "sessions": []
   },
   {
@@ -4303,6 +4969,9 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Hold%20It%20Together"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Hold%20It%20Together"
     },
     "sessions": []
   },
@@ -4331,6 +5000,12 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Hold%20Onto%20Me"
     },
+    "rt": {
+      "critics_score": 100,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/hold_onto_me",
+      "search_url": "https://www.rottentomatoes.com/search?search=Hold%20Onto%20Me"
+    },
     "sessions": []
   },
   {
@@ -4350,6 +5025,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Hollywood%20Heretic%3A%20The%20Many%20Faces%20of%20Kim%20Novak"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Hollywood%20Heretic%3A%20The%20Many%20Faces%20of%20Kim%20Novak"
     },
     "sessions": []
   },
@@ -4383,6 +5061,9 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Holofiction",
       "title_zh": "屠杀虚构史"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Holofiction"
+    },
     "sessions": []
   },
   {
@@ -4410,6 +5091,12 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=How%20to%20Divorce%20During%20the%20War"
     },
+    "rt": {
+      "critics_score": 100,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/how_to_divorce_during_the_war",
+      "search_url": "https://www.rottentomatoes.com/search?search=How%20to%20Divorce%20During%20the%20War"
+    },
     "sessions": []
   },
   {
@@ -4436,6 +5123,9 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=How%20to%20Listen%20to%20Fountains"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=How%20to%20Listen%20to%20Fountains"
     },
     "sessions": []
   },
@@ -4468,6 +5158,12 @@
       "url": "https://movie.douban.com/subject/36828397/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Human%20Resource"
     },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/human_resource",
+      "search_url": "https://www.rottentomatoes.com/search?search=Human%20Resource"
+    },
     "sessions": []
   },
   {
@@ -4498,6 +5194,9 @@
       "votes": null,
       "url": "https://movie.douban.com/subject/37404430/",
       "search_url": "https://www.douban.com/search?cat=1002&q=I%20Saw%20the%20Face%20of%20God%20in%20the%20Jet%20Wash"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=I%20Saw%20the%20Face%20of%20God%20in%20the%20Jet%20Wash"
     },
     "sessions": []
   },
@@ -4531,6 +5230,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=I%20See%20Buildings%20Fall%20Like%20Lightning",
       "title_zh": "忽喇喇似大厦倾"
     },
+    "rt": {
+      "critics_score": 94,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/i_see_buildings_fall_like_lightning",
+      "search_url": "https://www.rottentomatoes.com/search?search=I%20See%20Buildings%20Fall%20Like%20Lightning"
+    },
     "sessions": []
   },
   {
@@ -4562,6 +5267,12 @@
       "url": "https://movie.douban.com/subject/1304205/",
       "search_url": "https://www.douban.com/search?cat=1002&q=I%20Shot%20Andy%20Warhol",
       "title_zh": "我杀了安迪·沃霍尔"
+    },
+    "rt": {
+      "critics_score": 79,
+      "audience_score": 70,
+      "url": "https://www.rottentomatoes.com/m/i_shot_andy_warhol",
+      "search_url": "https://www.rottentomatoes.com/search?search=I%20Shot%20Andy%20Warhol"
     },
     "sessions": []
   },
@@ -4595,6 +5306,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=I%20Want%20Your%20Sex",
       "title_zh": "我要你的性"
     },
+    "rt": {
+      "critics_score": 89,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/i_want_your_sex",
+      "search_url": "https://www.rottentomatoes.com/search?search=I%20Want%20Your%20Sex"
+    },
     "sessions": []
   },
   {
@@ -4627,6 +5344,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Imposters",
       "title_zh": "冒牌货"
     },
+    "rt": {
+      "critics_score": 100,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/imposters",
+      "search_url": "https://www.rottentomatoes.com/search?search=Imposters"
+    },
     "sessions": []
   },
   {
@@ -4646,6 +5369,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=In%20Conversation%3A%20Tamra%20Davis"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=In%20Conversation%3A%20Tamra%20Davis"
     },
     "sessions": []
   },
@@ -4673,6 +5399,9 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=In%20Her%20Arms"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=In%20Her%20Arms"
     },
     "sessions": []
   },
@@ -4706,6 +5435,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Incomer",
       "title_zh": "岛外来客"
     },
+    "rt": {
+      "critics_score": 92,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/the_incomer",
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Incomer"
+    },
     "sessions": []
   },
   {
@@ -4727,6 +5462,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Infernal%20Combustion"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Infernal%20Combustion"
     },
     "sessions": []
   },
@@ -4755,6 +5493,12 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Inside%20Amir"
     },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/inside_amir",
+      "search_url": "https://www.rottentomatoes.com/search?search=Inside%20Amir"
+    },
     "sessions": []
   },
   {
@@ -4777,6 +5521,9 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=International%20Shorts%201"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=International%20Shorts%201"
+    },
     "sessions": []
   },
   {
@@ -4798,6 +5545,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=International%20Shorts%202"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=International%20Shorts%202"
     },
     "sessions": []
   },
@@ -4826,6 +5576,9 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Intersecting%20Memory"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Intersecting%20Memory"
+    },
     "sessions": []
   },
   {
@@ -4847,6 +5600,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Invincible%20Spirit"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Invincible%20Spirit"
     },
     "sessions": []
   },
@@ -4870,6 +5626,9 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Jauja"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Jauja"
+    },
     "sessions": []
   },
   {
@@ -4891,6 +5650,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Jebediah%3A%20Are%20We%20OK%3F"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Jebediah%3A%20Are%20We%20OK%3F"
     },
     "sessions": []
   },
@@ -4924,6 +5686,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Jim%20Queen",
       "title_zh": "吉姆皇后"
     },
+    "rt": {
+      "critics_score": 91,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/jim_queen",
+      "search_url": "https://www.rottentomatoes.com/search?search=Jim%20Queen"
+    },
     "sessions": []
   },
   {
@@ -4956,6 +5724,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Johanna%20d%E2%80%99Arc%20of%20Mongolia",
       "title_zh": "蒙古的圣女贞德"
     },
+    "rt": {
+      "critics_score": null,
+      "audience_score": 83,
+      "url": "https://www.rottentomatoes.com/m/johanna_darc_of_mongolia",
+      "search_url": "https://www.rottentomatoes.com/search?search=Johanna%20d%E2%80%99Arc%20of%20Mongolia"
+    },
     "sessions": []
   },
   {
@@ -4977,6 +5751,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=John%20Cameron%20Mitchell%20Presents%3A%20Hedwig%20and%20the%20Angry%20Inch%2025th%20Anniversary"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=John%20Cameron%20Mitchell%20Presents%3A%20Hedwig%20and%20the%20Angry%20Inch%2025th%20Anniversary"
     },
     "sessions": []
   },
@@ -5010,6 +5787,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Josephine",
       "title_zh": "约瑟芬"
     },
+    "rt": {
+      "critics_score": 97,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/josephine",
+      "search_url": "https://www.rottentomatoes.com/search?search=Josephine"
+    },
     "sessions": []
   },
   {
@@ -5041,6 +5824,12 @@
       "url": "https://movie.douban.com/subject/37923618/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Joybubbles",
       "title_zh": "欢乐泡泡声"
+    },
+    "rt": {
+      "critics_score": 82,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/joybubbles",
+      "search_url": "https://www.rottentomatoes.com/search?search=Joybubbles"
     },
     "sessions": []
   },
@@ -5074,6 +5863,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Kim%20Novak%E2%80%99s%20Vertigo",
       "title_zh": "金·诺瓦克的《迷魂记》"
     },
+    "rt": {
+      "critics_score": 89,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/kim_novaks_vertigo",
+      "search_url": "https://www.rottentomatoes.com/search?search=Kim%20Novak%E2%80%99s%20Vertigo"
+    },
     "sessions": []
   },
   {
@@ -5104,6 +5899,12 @@
       "votes": null,
       "url": "https://movie.douban.com/subject/38198505/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Kings%20of%20Venice"
+    },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/kings_of_venice",
+      "search_url": "https://www.rottentomatoes.com/search?search=Kings%20of%20Venice"
     },
     "sessions": []
   },
@@ -5137,6 +5938,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Knife%3A%20The%20Attempted%20Murder%20of%20Salman%20Rushdie",
       "title_zh": "刀：刺杀萨尔曼·拉什迪"
     },
+    "rt": {
+      "critics_score": 92,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/knife_the_attempted_murder_of_salman_rushdie",
+      "search_url": "https://www.rottentomatoes.com/search?search=Knife%3A%20The%20Attempted%20Murder%20of%20Salman%20Rushdie"
+    },
     "sessions": []
   },
   {
@@ -5158,6 +5965,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=KURA%3A%20An%20African%20AFL%20Story"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=KURA%3A%20An%20African%20AFL%20Story"
     },
     "sessions": []
   },
@@ -5191,6 +6001,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=La%20Bola%20Negra",
       "title_zh": "黑球"
     },
+    "rt": {
+      "critics_score": 88,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/la_bola_negra",
+      "search_url": "https://www.rottentomatoes.com/search?search=La%20Bola%20Negra"
+    },
     "sessions": []
   },
   {
@@ -5217,6 +6033,12 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=La%20Gradiva"
+    },
+    "rt": {
+      "critics_score": 100,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/la_gradiva",
+      "search_url": "https://www.rottentomatoes.com/search?search=La%20Gradiva"
     },
     "sessions": []
   },
@@ -5250,6 +6072,9 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=La%20libertad",
       "title_zh": "自由"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=La%20libertad"
+    },
     "sessions": []
   },
   {
@@ -5282,6 +6107,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=La%20Perra",
       "title_zh": "雌犬"
     },
+    "rt": {
+      "critics_score": 64,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/la_perra",
+      "search_url": "https://www.rottentomatoes.com/search?search=La%20Perra"
+    },
     "sessions": []
   },
   {
@@ -5309,6 +6140,9 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Land%20of%20Barbar"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Land%20of%20Barbar"
+    },
     "sessions": []
   },
   {
@@ -5330,6 +6164,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Landmarks"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Landmarks"
     },
     "sessions": []
   },
@@ -5357,6 +6194,9 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Last%20Chance%20to%20Evacuate%20Earth"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Last%20Chance%20to%20Evacuate%20Earth"
     },
     "sessions": []
   },
@@ -5390,6 +6230,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Last%20First%3A%20Winter%20K2",
       "title_zh": "最后的第一：冬季K2"
     },
+    "rt": {
+      "critics_score": 100,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/the_last_first_winter_k2",
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Last%20First%3A%20Winter%20K2"
+    },
     "sessions": []
   },
   {
@@ -5415,6 +6261,9 @@
       "votes": null,
       "url": "https://movie.douban.com/subject/37820366/",
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Latcher"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Latcher"
     },
     "sessions": []
   },
@@ -5448,6 +6297,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Leader",
       "title_zh": "领路人"
     },
+    "rt": {
+      "critics_score": 92,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/the_leader",
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Leader"
+    },
     "sessions": []
   },
   {
@@ -5480,6 +6335,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Legend%20of%20Lylah%20Clare",
       "title_zh": "海棠留香"
     },
+    "rt": {
+      "critics_score": 60,
+      "audience_score": 38,
+      "url": "https://www.rottentomatoes.com/m/the-legend-of-lylah-clare",
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Legend%20of%20Lylah%20Clare"
+    },
     "sessions": []
   },
   {
@@ -5506,6 +6367,12 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Light%20Pillar"
+    },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/light_pillar",
+      "search_url": "https://www.rottentomatoes.com/search?search=Light%20Pillar"
     },
     "sessions": []
   },
@@ -5539,6 +6406,9 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Lion%20Rock",
       "title_zh": "狮子岩"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Lion%20Rock"
+    },
     "sessions": []
   },
   {
@@ -5570,6 +6440,12 @@
       "url": "https://movie.douban.com/subject/3060601/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Liverpool",
       "title_zh": "利物浦"
+    },
+    "rt": {
+      "critics_score": 94,
+      "audience_score": 49,
+      "url": "https://www.rottentomatoes.com/m/1217842-liverpool",
+      "search_url": "https://www.rottentomatoes.com/search?search=Liverpool"
     },
     "sessions": []
   },
@@ -5603,6 +6479,9 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Lomu",
       "title_zh": "洛穆"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Lomu"
+    },
     "sessions": []
   },
   {
@@ -5629,6 +6508,12 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Loneliest%20Man%20in%20Town"
+    },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/the_loneliest_man_in_town",
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Loneliest%20Man%20in%20Town"
     },
     "sessions": []
   },
@@ -5662,6 +6547,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Look%20Both%20Ways",
       "title_zh": "回望"
     },
+    "rt": {
+      "critics_score": 75,
+      "audience_score": 75,
+      "url": "https://www.rottentomatoes.com/m/1161542-look_both_ways",
+      "search_url": "https://www.rottentomatoes.com/search?search=Look%20Both%20Ways"
+    },
     "sessions": []
   },
   {
@@ -5694,6 +6585,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Los%20muertos",
       "title_zh": "再见伊甸园"
     },
+    "rt": {
+      "critics_score": 86,
+      "audience_score": 66,
+      "url": "https://www.rottentomatoes.com/m/1192840-los_muertos",
+      "search_url": "https://www.rottentomatoes.com/search?search=Los%20muertos"
+    },
     "sessions": []
   },
   {
@@ -5715,6 +6612,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Lost%20in%20the%20Water"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Lost%20in%20the%20Water"
     },
     "sessions": []
   },
@@ -5742,6 +6642,12 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Lost%20Land"
+    },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/lost_land_2025",
+      "search_url": "https://www.rottentomatoes.com/search?search=Lost%20Land"
     },
     "sessions": []
   },
@@ -5775,6 +6681,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=M%C4%81rama",
       "title_zh": "玛拉玛"
     },
+    "rt": {
+      "critics_score": 100,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/marama",
+      "search_url": "https://www.rottentomatoes.com/search?search=M%C4%81rama"
+    },
     "sessions": []
   },
   {
@@ -5796,6 +6708,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Mad%20Rush"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Mad%20Rush"
     },
     "sessions": []
   },
@@ -5823,6 +6738,12 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Madame%20X%3A%20An%20Absolute%20Ruler"
+    },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/madame_x_eine_absolute_herrscherin",
+      "search_url": "https://www.rottentomatoes.com/search?search=Madame%20X%3A%20An%20Absolute%20Ruler"
     },
     "sessions": []
   },
@@ -5856,6 +6777,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Maddie%E2%80%99s%20Secret",
       "title_zh": "麦迪的秘密"
     },
+    "rt": {
+      "critics_score": 86,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/maddies_secret",
+      "search_url": "https://www.rottentomatoes.com/search?search=Maddie%E2%80%99s%20Secret"
+    },
     "sessions": []
   },
   {
@@ -5886,6 +6813,9 @@
       "votes": null,
       "url": "https://movie.douban.com/subject/38208410/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Man%20Eating%20Pussy"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Man%20Eating%20Pussy"
     },
     "sessions": []
   },
@@ -5919,6 +6849,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Man%20I%20Love",
       "title_zh": "我爱的男人"
     },
+    "rt": {
+      "critics_score": 94,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/the_man_i_love",
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Man%20I%20Love"
+    },
     "sessions": []
   },
   {
@@ -5940,6 +6876,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Man%20Wearing%20a%20Helmet"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Man%20Wearing%20a%20Helmet"
     },
     "sessions": []
   },
@@ -5973,6 +6912,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Man%20With%20the%20Golden%20Arm",
       "title_zh": "金臂人"
     },
+    "rt": {
+      "critics_score": 81,
+      "audience_score": 83,
+      "url": "https://www.rottentomatoes.com/m/the_man_with_the_golden_arm",
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Man%20With%20the%20Golden%20Arm"
+    },
     "sessions": []
   },
   {
@@ -6005,6 +6950,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Marc%20by%20Sofia",
       "title_zh": "索菲亚眼中的马克"
     },
+    "rt": {
+      "critics_score": 74,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/marc_by_sofia",
+      "search_url": "https://www.rottentomatoes.com/search?search=Marc%20by%20Sofia"
+    },
     "sessions": []
   },
   {
@@ -6035,6 +6986,9 @@
       "votes": null,
       "url": "https://movie.douban.com/subject/37821702/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Mardochi"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Mardochi"
     },
     "sessions": []
   },
@@ -6068,6 +7022,9 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Mary%20Anning",
       "title_zh": "玛丽·安宁：化石猎人"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Mary%20Anning"
+    },
     "sessions": []
   },
   {
@@ -6099,6 +7056,12 @@
       "url": "https://movie.douban.com/subject/38399021/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Mary%20Oliver%3A%20Saved%20by%20the%20Beauty%20of%20the%20World"
     },
+    "rt": {
+      "critics_score": 94,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/mary_oliver_saved_by_the_beauty_of_the_world",
+      "search_url": "https://www.rottentomatoes.com/search?search=Mary%20Oliver%3A%20Saved%20by%20the%20Beauty%20of%20the%20World"
+    },
     "sessions": []
   },
   {
@@ -6126,6 +7089,12 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Master"
     },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/master_of_the_universe_2026",
+      "search_url": "https://www.rottentomatoes.com/search?search=Master"
+    },
     "sessions": []
   },
   {
@@ -6152,6 +7121,12 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Match"
+    },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/the_match_2",
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Match"
     },
     "sessions": []
   },
@@ -6185,6 +7160,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Medea",
       "title_zh": "美狄亚"
     },
+    "rt": {
+      "critics_score": 73,
+      "audience_score": 75,
+      "url": "https://www.rottentomatoes.com/m/medea_1969",
+      "search_url": "https://www.rottentomatoes.com/search?search=Medea"
+    },
     "sessions": []
   },
   {
@@ -6216,6 +7197,12 @@
       "url": "https://movie.douban.com/subject/35496965/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Memory",
       "title_zh": "童年记忆"
+    },
+    "rt": {
+      "critics_score": 100,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/a_photographic_memory",
+      "search_url": "https://www.rottentomatoes.com/search?search=Memory"
     },
     "sessions": []
   },
@@ -6249,6 +7236,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Middle%20of%20the%20Night",
       "title_zh": "白发红颜未了情"
     },
+    "rt": {
+      "critics_score": null,
+      "audience_score": 64,
+      "url": "https://www.rottentomatoes.com/m/middle-of-the-night",
+      "search_url": "https://www.rottentomatoes.com/search?search=Middle%20of%20the%20Night"
+    },
     "sessions": []
   },
   {
@@ -6281,6 +7274,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Mile%20End%20Kicks",
       "title_zh": "迈尔安德快感"
     },
+    "rt": {
+      "critics_score": 85,
+      "audience_score": 60,
+      "url": "https://www.rottentomatoes.com/m/mile_end_kicks",
+      "search_url": "https://www.rottentomatoes.com/search?search=Mile%20End%20Kicks"
+    },
     "sessions": []
   },
   {
@@ -6308,6 +7307,12 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Minotaur"
     },
+    "rt": {
+      "critics_score": 100,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/minotaur_2026",
+      "search_url": "https://www.rottentomatoes.com/search?search=Minotaur"
+    },
     "sessions": []
   },
   {
@@ -6327,6 +7332,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Modern%20Moviemaking"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Modern%20Moviemaking"
     },
     "sessions": []
   },
@@ -6360,6 +7368,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Mouse",
       "title_zh": "泰版窥探"
     },
+    "rt": {
+      "critics_score": 100,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/mouse_2026",
+      "search_url": "https://www.rottentomatoes.com/search?search=Mouse"
+    },
     "sessions": []
   },
   {
@@ -6392,6 +7406,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Mum%2C%20I%E2%80%99m%20Alien%20Pregnant",
       "title_zh": "异种妊娠"
     },
+    "rt": {
+      "critics_score": 94,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/mum_im_alien_pregnant",
+      "search_url": "https://www.rottentomatoes.com/search?search=Mum%2C%20I%E2%80%99m%20Alien%20Pregnant"
+    },
     "sessions": []
   },
   {
@@ -6422,6 +7442,9 @@
       "votes": null,
       "url": "https://movie.douban.com/subject/37869064/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Murmurations"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Murmurations"
     },
     "sessions": []
   },
@@ -6455,6 +7478,9 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=My%20Good%20Boy",
       "title_zh": "我們的愛"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=My%20Good%20Boy"
+    },
     "sessions": []
   },
   {
@@ -6486,6 +7512,9 @@
       "url": "https://movie.douban.com/subject/27016327/",
       "search_url": "https://www.douban.com/search?cat=1002&q=My%20Life%20Without%20Steve"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=My%20Life%20Without%20Steve"
+    },
     "sessions": []
   },
   {
@@ -6512,6 +7541,12 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=My%20Wife%20Cries"
+    },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/my_wife_cries",
+      "search_url": "https://www.rottentomatoes.com/search?search=My%20Wife%20Cries"
     },
     "sessions": []
   },
@@ -6545,6 +7580,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=My%20Year%20Without%20Sex",
       "title_zh": "大病后的一年"
     },
+    "rt": {
+      "critics_score": 93,
+      "audience_score": 50,
+      "url": "https://www.rottentomatoes.com/m/my_year_without_sex",
+      "search_url": "https://www.rottentomatoes.com/search?search=My%20Year%20Without%20Sex"
+    },
     "sessions": []
   },
   {
@@ -6577,6 +7618,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Nadja",
       "title_zh": "嗜血轮回"
     },
+    "rt": {
+      "critics_score": 70,
+      "audience_score": 67,
+      "url": "https://www.rottentomatoes.com/m/nadja",
+      "search_url": "https://www.rottentomatoes.com/search?search=Nadja"
+    },
     "sessions": []
   },
   {
@@ -6604,6 +7651,12 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Nagi%20Notes"
     },
+    "rt": {
+      "critics_score": 91,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/nagi_notes",
+      "search_url": "https://www.rottentomatoes.com/search?search=Nagi%20Notes"
+    },
     "sessions": []
   },
   {
@@ -6630,6 +7683,9 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Native%20Police"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Native%20Police"
     },
     "sessions": []
   },
@@ -6663,6 +7719,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Newport%20%26%20the%20Great%20Folk%20Dream",
       "title_zh": "纽波特与伟大的民谣梦"
     },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/newport_and_the_great_folk_dream",
+      "search_url": "https://www.rottentomatoes.com/search?search=Newport%20%26%20the%20Great%20Folk%20Dream"
+    },
     "sessions": []
   },
   {
@@ -6689,6 +7751,12 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Ninja%20Scroll"
+    },
+    "rt": {
+      "critics_score": 90,
+      "audience_score": 89,
+      "url": "https://www.rottentomatoes.com/m/ninja-scroll",
+      "search_url": "https://www.rottentomatoes.com/search?search=Ninja%20Scroll"
     },
     "sessions": []
   },
@@ -6722,6 +7790,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Nino",
       "title_zh": "尼诺"
     },
+    "rt": {
+      "critics_score": 96,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/nino_2025",
+      "search_url": "https://www.rottentomatoes.com/search?search=Nino"
+    },
     "sessions": []
   },
   {
@@ -6744,6 +7818,9 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=No%20Title"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=No%20Title"
+    },
     "sessions": []
   },
   {
@@ -6765,6 +7842,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=North%20Melbourne%20Cheer%20Squad"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=North%20Melbourne%20Cheer%20Squad"
     },
     "sessions": []
   },
@@ -6798,6 +7878,9 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Nostalgia%20for%20the%20Future",
       "title_zh": "未来乡愁"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Nostalgia%20for%20the%20Future"
+    },
     "sessions": []
   },
   {
@@ -6830,6 +7913,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Nuisance%20Bear",
       "title_zh": "麻烦熊"
     },
+    "rt": {
+      "critics_score": 97,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/nuisance_bear",
+      "search_url": "https://www.rottentomatoes.com/search?search=Nuisance%20Bear"
+    },
     "sessions": []
   },
   {
@@ -6861,6 +7950,9 @@
       "url": "https://movie.douban.com/subject/37923683/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Obi%20Is%20a%20Boy"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Obi%20Is%20a%20Boy"
+    },
     "sessions": []
   },
   {
@@ -6882,6 +7974,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Of%20Womb"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Of%20Womb"
     },
     "sessions": []
   },
@@ -6915,6 +8010,9 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Oligarch%20and%20the%20Art%20Dealer",
       "title_zh": "寡头与画商"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Oligarch%20and%20the%20Art%20Dealer"
+    },
     "sessions": []
   },
   {
@@ -6941,6 +8039,12 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=On%20the%20Road"
+    },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/on_the_road_2025",
+      "search_url": "https://www.rottentomatoes.com/search?search=On%20the%20Road"
     },
     "sessions": []
   },
@@ -6969,6 +8073,9 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Once%20in%20a%20Body"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Once%20in%20a%20Body"
+    },
     "sessions": []
   },
   {
@@ -6990,6 +8097,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Once%20Upon%20a%20Time%20in%20Harlem"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Once%20Upon%20a%20Time%20in%20Harlem"
     },
     "sessions": []
   },
@@ -7017,6 +8127,12 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=One%20in%20a%20Million"
+    },
+    "rt": {
+      "critics_score": 100,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/one_in_a_million_2026",
+      "search_url": "https://www.rottentomatoes.com/search?search=One%20in%20a%20Million"
     },
     "sessions": []
   },
@@ -7050,6 +8166,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Only%20Living%20Pickpocket%20in%20New%20York",
       "title_zh": "纽约最后的扒手"
     },
+    "rt": {
+      "critics_score": 100,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/the_only_living_pickpocket_in_new_york",
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Only%20Living%20Pickpocket%20in%20New%20York"
+    },
     "sessions": []
   },
   {
@@ -7071,6 +8193,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Opening%20Night%20Gala%3A%20Wicker"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Opening%20Night%20Gala%3A%20Wicker"
     },
     "sessions": []
   },
@@ -7098,6 +8223,9 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Our%20Choir%20Has%20Always%20Been%20Travelling"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Our%20Choir%20Has%20Always%20Been%20Travelling"
     },
     "sessions": []
   },
@@ -7131,6 +8259,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Our%20Effed%20Up%20World",
       "title_zh": "崩坏世界"
     },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/our_effed_up_world",
+      "search_url": "https://www.rottentomatoes.com/search?search=Our%20Effed%20Up%20World"
+    },
     "sessions": []
   },
   {
@@ -7157,6 +8291,12 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Palimpsest%3A%20The%20Story%20of%20a%20Name"
+    },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/palimpsest_the_story_of_a_name",
+      "search_url": "https://www.rottentomatoes.com/search?search=Palimpsest%3A%20The%20Story%20of%20a%20Name"
     },
     "sessions": []
   },
@@ -7189,6 +8329,9 @@
       "url": "https://movie.douban.com/subject/37930079/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Paper%20Trail"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Paper%20Trail"
+    },
     "sessions": []
   },
   {
@@ -7215,6 +8358,9 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Paradise"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Paradise"
     },
     "sessions": []
   },
@@ -7243,6 +8389,12 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Parallel%20Tales"
     },
+    "rt": {
+      "critics_score": 20,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/parallel_tales",
+      "search_url": "https://www.rottentomatoes.com/search?search=Parallel%20Tales"
+    },
     "sessions": []
   },
   {
@@ -7269,6 +8421,9 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Past%20Future%20Continuous"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Past%20Future%20Continuous"
     },
     "sessions": []
   },
@@ -7302,6 +8457,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Phenomena",
       "title_zh": "万象"
     },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/phenomena_2026",
+      "search_url": "https://www.rottentomatoes.com/search?search=Phenomena"
+    },
     "sessions": []
   },
   {
@@ -7327,6 +8488,9 @@
       "votes": null,
       "url": "https://movie.douban.com/subject/37479030/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Phillip%20Philadelphia"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Phillip%20Philadelphia"
     },
     "sessions": []
   },
@@ -7359,6 +8523,9 @@
       "url": "https://movie.douban.com/subject/37930077/",
       "search_url": "https://www.douban.com/search?cat=1002&q=%C2%A1PIKA!"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=%C2%A1PIKA!"
+    },
     "sessions": []
   },
   {
@@ -7389,6 +8556,12 @@
       "votes": null,
       "url": "https://movie.douban.com/subject/38198678/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Please"
+    },
+    "rt": {
+      "critics_score": 36,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/please_dont_feed_the_children",
+      "search_url": "https://www.rottentomatoes.com/search?search=Please"
     },
     "sessions": []
   },
@@ -7422,6 +8595,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Portrait%20of%20Jason",
       "title_zh": "杰森的画像"
     },
+    "rt": {
+      "critics_score": 100,
+      "audience_score": 78,
+      "url": "https://www.rottentomatoes.com/m/portrait_of_jason",
+      "search_url": "https://www.rottentomatoes.com/search?search=Portrait%20of%20Jason"
+    },
     "sessions": []
   },
   {
@@ -7449,6 +8628,9 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Praying%20Mantis"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Praying%20Mantis"
+    },
     "sessions": []
   },
   {
@@ -7470,6 +8652,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Premiere%20With%20Purpose%3A%20Silenced"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Premiere%20With%20Purpose%3A%20Silenced"
     },
     "sessions": []
   },
@@ -7503,6 +8688,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Pressure",
       "title_zh": "诺曼底72小时"
     },
+    "rt": {
+      "critics_score": 87,
+      "audience_score": 95,
+      "url": "https://www.rottentomatoes.com/m/pressure_2026",
+      "search_url": "https://www.rottentomatoes.com/search?search=Pressure"
+    },
     "sessions": []
   },
   {
@@ -7524,6 +8715,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Protest%20on%20the%20Dancefloor"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Protest%20on%20the%20Dancefloor"
     },
     "sessions": []
   },
@@ -7552,6 +8746,12 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Queen%20at%20Sea"
     },
+    "rt": {
+      "critics_score": 95,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/queen_at_sea",
+      "search_url": "https://www.rottentomatoes.com/search?search=Queen%20at%20Sea"
+    },
     "sessions": []
   },
   {
@@ -7573,6 +8773,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Queens%20To%20The%20Front"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Queens%20To%20The%20Front"
     },
     "sessions": []
   },
@@ -7601,6 +8804,9 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Raft%20Race"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Raft%20Race"
+    },
     "sessions": []
   },
   {
@@ -7622,6 +8828,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Rapid%20Eye%20Movement"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Rapid%20Eye%20Movement"
     },
     "sessions": []
   },
@@ -7655,6 +8864,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Reckless",
       "title_zh": "狂匪追赃"
     },
+    "rt": {
+      "critics_score": 93,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/reckless_2026",
+      "search_url": "https://www.rottentomatoes.com/search?search=Reckless"
+    },
     "sessions": []
   },
   {
@@ -7686,6 +8901,12 @@
       "url": "https://movie.douban.com/subject/38415392/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Rehearsals%20for%20a%20Revolution",
       "title_zh": "革命的预演"
+    },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/rehearsals_for_a_revolution",
+      "search_url": "https://www.rottentomatoes.com/search?search=Rehearsals%20for%20a%20Revolution"
     },
     "sessions": []
   },
@@ -7719,6 +8940,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Remake",
       "title_zh": "重制"
     },
+    "rt": {
+      "critics_score": 100,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/remake_2025",
+      "search_url": "https://www.rottentomatoes.com/search?search=Remake"
+    },
     "sessions": []
   },
   {
@@ -7745,6 +8972,9 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Replica"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Replica"
     },
     "sessions": []
   },
@@ -7778,6 +9008,9 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Revolving%20Rounds",
       "title_zh": "转出小宇宙"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Revolving%20Rounds"
+    },
     "sessions": []
   },
   {
@@ -7804,6 +9037,12 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20River%20Train"
+    },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/the_river_train",
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20River%20Train"
     },
     "sessions": []
   },
@@ -7835,6 +9074,9 @@
       "votes": null,
       "url": "https://movie.douban.com/subject/35018460/",
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Road%20to%20Zennor"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Road%20to%20Zennor"
     },
     "sessions": []
   },
@@ -7868,6 +9110,9 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Rodeo%20Dreams",
       "title_zh": "牛仔梦"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Rodeo%20Dreams"
+    },
     "sessions": []
   },
   {
@@ -7898,6 +9143,9 @@
       "votes": null,
       "url": "https://movie.douban.com/subject/37413939/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Rojo%20%C5%BDalia%20Blau"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Rojo%20%C5%BDalia%20Blau"
     },
     "sessions": []
   },
@@ -7931,6 +9179,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Rose",
       "title_zh": "罗斯"
     },
+    "rt": {
+      "critics_score": 100,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/rose_2026",
+      "search_url": "https://www.rottentomatoes.com/search?search=Rose"
+    },
     "sessions": []
   },
   {
@@ -7962,6 +9216,12 @@
       "url": "https://movie.douban.com/subject/37167155/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Rose%20of%20Nevada",
       "title_zh": "内华达之瑰"
+    },
+    "rt": {
+      "critics_score": 96,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/rose_of_nevada",
+      "search_url": "https://www.rottentomatoes.com/search?search=Rose%20of%20Nevada"
     },
     "sessions": []
   },
@@ -7995,6 +9255,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Rosebush%20Pruning",
       "title_zh": "蔷薇修剪术"
     },
+    "rt": {
+      "critics_score": 26,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/rosebush_pruning",
+      "search_url": "https://www.rottentomatoes.com/search?search=Rosebush%20Pruning"
+    },
     "sessions": []
   },
   {
@@ -8027,6 +9293,9 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Roya",
       "title_zh": "罗娅的三平米"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Roya"
+    },
     "sessions": []
   },
   {
@@ -8054,6 +9323,12 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Sad%20Girlz"
     },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/sad_girlz",
+      "search_url": "https://www.rottentomatoes.com/search?search=Sad%20Girlz"
+    },
     "sessions": []
   },
   {
@@ -8080,6 +9355,12 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Samurai%20and%20the%20Prisoner"
+    },
+    "rt": {
+      "critics_score": 94,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/the_samurai_and_the_prisoner",
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Samurai%20and%20the%20Prisoner"
     },
     "sessions": []
   },
@@ -8111,6 +9392,12 @@
       "votes": null,
       "url": "https://movie.douban.com/subject/38398997/",
       "search_url": "https://www.douban.com/search?cat=1002&q=School%20for%20Defectors"
+    },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/school_for_defectors",
+      "search_url": "https://www.rottentomatoes.com/search?search=School%20for%20Defectors"
     },
     "sessions": []
   },
@@ -8144,6 +9431,9 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Sense%20of%20Nowhere",
       "title_zh": "神游太虚"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Sense%20of%20Nowhere"
+    },
     "sessions": []
   },
   {
@@ -8176,6 +9466,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Sentient",
       "title_zh": "有感"
     },
+    "rt": {
+      "critics_score": 70,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/sentient",
+      "search_url": "https://www.rottentomatoes.com/search?search=Sentient"
+    },
     "sessions": []
   },
   {
@@ -8197,6 +9493,12 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Shades%20of%20Silk"
+    },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/shades_of_silk",
+      "search_url": "https://www.rottentomatoes.com/search?search=Shades%20of%20Silk"
     },
     "sessions": []
   },
@@ -8225,6 +9527,12 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Shape%20of%20Momo"
     },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/shape_of_momo",
+      "search_url": "https://www.rottentomatoes.com/search?search=Shape%20of%20Momo"
+    },
     "sessions": []
   },
   {
@@ -8251,6 +9559,12 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Sheep%20in%20the%20Box"
+    },
+    "rt": {
+      "critics_score": 48,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/sheep_in_the_box",
+      "search_url": "https://www.rottentomatoes.com/search?search=Sheep%20in%20the%20Box"
     },
     "sessions": []
   },
@@ -8283,6 +9597,9 @@
       "url": "https://movie.douban.com/subject/37923443/",
       "search_url": "https://www.douban.com/search?cat=1002&q=A%20Shot%20at%20Art"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=A%20Shot%20at%20Art"
+    },
     "sessions": []
   },
   {
@@ -8313,6 +9630,9 @@
       "votes": null,
       "url": "https://movie.douban.com/subject/37067959/",
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Siege%20of%20Paradise"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Siege%20of%20Paradise"
     },
     "sessions": []
   },
@@ -8346,6 +9666,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Silenced",
       "title_zh": "被消音"
     },
+    "rt": {
+      "critics_score": 100,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/silenced_2026",
+      "search_url": "https://www.rottentomatoes.com/search?search=Silenced"
+    },
     "sessions": []
   },
   {
@@ -8372,6 +9698,9 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Sin%20t%C3%ADtulo%20(Carta%20para%20Serra)"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Sin%20t%C3%ADtulo%20(Carta%20para%20Serra)"
     },
     "sessions": []
   },
@@ -8400,6 +9729,12 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Six%20Months%20in%20a%20Pink%20and%20Blue%20Building"
     },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/seis_meses_e_el_edificio_rosa_con_azul",
+      "search_url": "https://www.rottentomatoes.com/search?search=Six%20Months%20in%20a%20Pink%20and%20Blue%20Building"
+    },
     "sessions": []
   },
   {
@@ -8422,6 +9757,9 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Slow%20Hours"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Slow%20Hours"
+    },
     "sessions": []
   },
   {
@@ -8443,6 +9781,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Small%20Treasures%3A%20Animations%20by%20Sarah%20Watt"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Small%20Treasures%3A%20Animations%20by%20Sarah%20Watt"
     },
     "sessions": []
   },
@@ -8475,6 +9816,9 @@
       "url": "https://movie.douban.com/subject/37657239/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Socks"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Socks"
+    },
     "sessions": []
   },
   {
@@ -8496,6 +9840,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Soft%20Gaze"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Soft%20Gaze"
     },
     "sessions": []
   },
@@ -8529,6 +9876,9 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=A%20Soil%20A%20Culture%20A%20River%20A%20People",
       "title_zh": "又见炊烟"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=A%20Soil%20A%20Culture%20A%20River%20A%20People"
+    },
     "sessions": []
   },
   {
@@ -8550,6 +9900,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Sound%20That%20Summons"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Sound%20That%20Summons"
     },
     "sessions": []
   },
@@ -8576,6 +9929,12 @@
       "votes": null,
       "url": "https://movie.douban.com/subject/36880045/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Sour%20Minnows"
+    },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/sour_minnows",
+      "search_url": "https://www.rottentomatoes.com/search?search=Sour%20Minnows"
     },
     "sessions": []
   },
@@ -8608,6 +9967,12 @@
       "url": "https://movie.douban.com/subject/37657246/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Souvenir"
     },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/souvenir_2026",
+      "search_url": "https://www.rottentomatoes.com/search?search=Souvenir"
+    },
     "sessions": []
   },
   {
@@ -8630,6 +9995,9 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Sovereign%20Shorts"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Sovereign%20Shorts"
+    },
     "sessions": []
   },
   {
@@ -8651,6 +10019,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Sovereign%20Shorts%20Premiere"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Sovereign%20Shorts%20Premiere"
     },
     "sessions": []
   },
@@ -8679,6 +10050,12 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Sparks"
     },
+    "rt": {
+      "critics_score": 90,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/sparks_2026",
+      "search_url": "https://www.rottentomatoes.com/search?search=Sparks"
+    },
     "sessions": []
   },
   {
@@ -8700,6 +10077,12 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Species"
+    },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/species_2026",
+      "search_url": "https://www.rottentomatoes.com/search?search=Species"
     },
     "sessions": []
   },
@@ -8732,6 +10115,9 @@
       "url": "https://movie.douban.com/subject/38351891/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Spiders%20on%20My%20Lashline"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Spiders%20on%20My%20Lashline"
+    },
     "sessions": []
   },
   {
@@ -8758,6 +10144,9 @@
       "url": "https://movie.douban.com/subject/37203243/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Statues%20Also%20Die%3F"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Statues%20Also%20Die%3F"
+    },
     "sessions": []
   },
   {
@@ -8779,6 +10168,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Story%20of%20Documentary%20Film%20(Part%201)"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Story%20of%20Documentary%20Film%20(Part%201)"
     },
     "sessions": []
   },
@@ -8802,6 +10194,9 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Story%20of%20Documentary%20Film%20(Part%202)"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Story%20of%20Documentary%20Film%20(Part%202)"
+    },
     "sessions": []
   },
   {
@@ -8823,6 +10218,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Story%20of%20Documentary%20Film%20(Part%203)"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Story%20of%20Documentary%20Film%20(Part%203)"
     },
     "sessions": []
   },
@@ -8856,6 +10254,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Strangers%20When%20We%20Meet",
       "title_zh": "相逢何必曾相识"
     },
+    "rt": {
+      "critics_score": 60,
+      "audience_score": 54,
+      "url": "https://www.rottentomatoes.com/m/strangers_when_we_meet",
+      "search_url": "https://www.rottentomatoes.com/search?search=Strangers%20When%20We%20Meet"
+    },
     "sessions": []
   },
   {
@@ -8887,6 +10291,12 @@
       "url": "https://movie.douban.com/subject/38459131/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Strawberries"
     },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/strawberries",
+      "search_url": "https://www.rottentomatoes.com/search?search=Strawberries"
+    },
     "sessions": []
   },
   {
@@ -8913,6 +10323,9 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Sublet"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Sublet"
     },
     "sessions": []
   },
@@ -8946,6 +10359,9 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Sukundimi%20Walks%20Before%20Me",
       "title_zh": "苏昆迪米在我之前行走"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Sukundimi%20Walks%20Before%20Me"
+    },
     "sessions": []
   },
   {
@@ -8978,6 +10394,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Summer%202000%3A%20The%20X-Cetra%20Story",
       "title_zh": "夏日2000：X-Cetra纪事"
     },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/summer_2000_the_x_cetra_story",
+      "search_url": "https://www.rottentomatoes.com/search?search=Summer%202000%3A%20The%20X-Cetra%20Story"
+    },
     "sessions": []
   },
   {
@@ -9008,6 +10430,12 @@
       "votes": null,
       "url": "https://movie.douban.com/subject/37502273/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Summer%20Tour"
+    },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/summer_tour_2025",
+      "search_url": "https://www.rottentomatoes.com/search?search=Summer%20Tour"
     },
     "sessions": []
   },
@@ -9041,6 +10469,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Sun%20Never%20Sets",
       "title_zh": "太阳永不落"
     },
+    "rt": {
+      "critics_score": 93,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/the_sun_never_sets_2026",
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Sun%20Never%20Sets"
+    },
     "sessions": []
   },
   {
@@ -9073,6 +10507,9 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Super%20Nature",
       "title_zh": "超8自然录"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Super%20Nature"
+    },
     "sessions": []
   },
   {
@@ -9104,6 +10541,9 @@
       "url": "https://movie.douban.com/subject/37310183/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Sweet%20Milk%20Lake"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Sweet%20Milk%20Lake"
+    },
     "sessions": []
   },
   {
@@ -9129,6 +10569,9 @@
       "votes": null,
       "url": "https://movie.douban.com/subject/38409112/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Swing%20Swish%20Sway"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Swing%20Swish%20Sway"
     },
     "sessions": []
   },
@@ -9156,6 +10599,12 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Tale%20of%20Silyan"
+    },
+    "rt": {
+      "critics_score": 97,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/the_tale_of_silyan",
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Tale%20of%20Silyan"
     },
     "sessions": []
   },
@@ -9189,6 +10638,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Tangles",
       "title_zh": "缠结：关于阿尔茨海默病、母亲和我的故事"
     },
+    "rt": {
+      "critics_score": 100,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/tangles",
+      "search_url": "https://www.rottentomatoes.com/search?search=Tangles"
+    },
     "sessions": []
   },
   {
@@ -9216,6 +10671,12 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Think%20Good"
     },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/think_good",
+      "search_url": "https://www.rottentomatoes.com/search?search=Think%20Good"
+    },
     "sessions": []
   },
   {
@@ -9242,6 +10703,12 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Ticket%20of%20No%20Return"
+    },
+    "rt": {
+      "critics_score": null,
+      "audience_score": 100,
+      "url": "https://www.rottentomatoes.com/m/ticket-of-no-return",
+      "search_url": "https://www.rottentomatoes.com/search?search=Ticket%20of%20No%20Return"
     },
     "sessions": []
   },
@@ -9275,6 +10742,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Tila%C3%AF",
       "title_zh": "蒂莱"
     },
+    "rt": {
+      "critics_score": null,
+      "audience_score": 64,
+      "url": "https://www.rottentomatoes.com/m/tilai",
+      "search_url": "https://www.rottentomatoes.com/search?search=Tila%C3%AF"
+    },
     "sessions": []
   },
   {
@@ -9306,6 +10779,9 @@
       "url": "https://movie.douban.com/subject/38392854/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Time%20and%20Tide",
       "title_zh": "光阴"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Time%20and%20Tide"
     },
     "sessions": []
   },
@@ -9339,6 +10815,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Time%20and%20Water",
       "title_zh": "逝水与流年"
     },
+    "rt": {
+      "critics_score": 91,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/time_and_water",
+      "search_url": "https://www.rottentomatoes.com/search?search=Time%20and%20Water"
+    },
     "sessions": []
   },
   {
@@ -9360,6 +10842,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Time%20Life%20Volume%209.%20Life%20Model"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Time%20Life%20Volume%209.%20Life%20Model"
     },
     "sessions": []
   },
@@ -9386,6 +10871,9 @@
       "votes": null,
       "url": "https://movie.douban.com/subject/38375953/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Tina%20Arena%3A%20Unravel%20Me"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Tina%20Arena%3A%20Unravel%20Me"
     },
     "sessions": []
   },
@@ -9417,6 +10905,12 @@
       "votes": null,
       "url": "https://movie.douban.com/subject/35171929/",
       "search_url": "https://www.douban.com/search?cat=1002&q=A%20to%20A"
+    },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/a_to_a",
+      "search_url": "https://www.rottentomatoes.com/search?search=A%20to%20A"
     },
     "sessions": []
   },
@@ -9450,6 +10944,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=To%20Hold%20a%20Mountain",
       "title_zh": "持守此山"
     },
+    "rt": {
+      "critics_score": 93,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/to_hold_a_mountain",
+      "search_url": "https://www.rottentomatoes.com/search?search=To%20Hold%20a%20Mountain"
+    },
     "sessions": []
   },
   {
@@ -9477,6 +10977,9 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Tomorrow%20I%E2%80%99ll%20Be%20Brave"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Tomorrow%20I%E2%80%99ll%20Be%20Brave"
+    },
     "sessions": []
   },
   {
@@ -9502,6 +11005,9 @@
       "votes": null,
       "url": "https://movie.douban.com/subject/37936943/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Too%20Few%20to%20Mention"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Too%20Few%20to%20Mention"
     },
     "sessions": []
   },
@@ -9533,6 +11039,9 @@
       "votes": null,
       "url": "https://movie.douban.com/subject/37469931/",
       "search_url": "https://www.douban.com/search?cat=1002&q=toward%20a%20fundamental%20theory%20of%20physics"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=toward%20a%20fundamental%20theory%20of%20physics"
     },
     "sessions": []
   },
@@ -9566,6 +11075,9 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Tristan%20Forever",
       "title_zh": "永远的特里斯坦岛"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Tristan%20Forever"
+    },
     "sessions": []
   },
   {
@@ -9597,6 +11109,9 @@
       "url": "https://movie.douban.com/subject/25985553/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Twelve%20Tales%20Told"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Twelve%20Tales%20Told"
+    },
     "sessions": []
   },
   {
@@ -9624,6 +11139,12 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Two%20Seasons%2C%20Two%20Strangers"
     },
+    "rt": {
+      "critics_score": 95,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/two_seasons_two_strangers",
+      "search_url": "https://www.rottentomatoes.com/search?search=Two%20Seasons%2C%20Two%20Strangers"
+    },
     "sessions": []
   },
   {
@@ -9645,6 +11166,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Twosome"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Twosome"
     },
     "sessions": []
   },
@@ -9672,6 +11196,12 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Unfaithful%20Wife"
+    },
+    "rt": {
+      "critics_score": 80,
+      "audience_score": 81,
+      "url": "https://www.rottentomatoes.com/m/the_unfaithful_wife",
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Unfaithful%20Wife"
     },
     "sessions": []
   },
@@ -9702,6 +11232,9 @@
       "url": "https://movie.douban.com/subject/5047198/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Usinimage"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Usinimage"
+    },
     "sessions": []
   },
   {
@@ -9723,6 +11256,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Vaka%20Moana%3A%20Ancestors%20of%20the%20Future"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Vaka%20Moana%3A%20Ancestors%20of%20the%20Future"
     },
     "sessions": []
   },
@@ -9750,6 +11286,12 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Variations%20on%20a%20Theme"
+    },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/variations_on_a_theme",
+      "search_url": "https://www.rottentomatoes.com/search?search=Variations%20on%20a%20Theme"
     },
     "sessions": []
   },
@@ -9783,6 +11325,9 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Vertical%20Shapes%20in%20a%20Horizontal%20Landscape",
       "title_zh": "水平景观中的垂直形状"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Vertical%20Shapes%20in%20a%20Horizontal%20Landscape"
+    },
     "sessions": []
   },
   {
@@ -9814,6 +11359,12 @@
       "url": "https://movie.douban.com/subject/1297294/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Vertigo",
       "title_zh": "迷魂记"
+    },
+    "rt": {
+      "critics_score": 94,
+      "audience_score": 92,
+      "url": "https://www.rottentomatoes.com/m/vertigo",
+      "search_url": "https://www.rottentomatoes.com/search?search=Vertigo"
     },
     "sessions": []
   },
@@ -9847,6 +11398,9 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=A%20Very%20Easy%20Death",
       "title_zh": "轻易之死"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=A%20Very%20Easy%20Death"
+    },
     "sessions": []
   },
   {
@@ -9879,6 +11433,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Victorian%20Psycho",
       "title_zh": "维多利亚时代的精神病人"
     },
+    "rt": {
+      "critics_score": 77,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/victorian_psycho",
+      "search_url": "https://www.rottentomatoes.com/search?search=Victorian%20Psycho"
+    },
     "sessions": []
   },
   {
@@ -9906,6 +11466,12 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Viva%20Carmen"
     },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/viva_carmen",
+      "search_url": "https://www.rottentomatoes.com/search?search=Viva%20Carmen"
+    },
     "sessions": []
   },
   {
@@ -9932,6 +11498,9 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Waking%20Hours"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Waking%20Hours"
     },
     "sessions": []
   },
@@ -9964,6 +11533,9 @@
       "url": "https://movie.douban.com/subject/37076921/",
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Way%20We%20Move"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Way%20We%20Move"
+    },
     "sessions": []
   },
   {
@@ -9990,6 +11562,12 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=We%20Are%20Aliens"
+    },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/we_are_aliens",
+      "search_url": "https://www.rottentomatoes.com/search?search=We%20Are%20Aliens"
     },
     "sessions": []
   },
@@ -10023,6 +11601,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=We%20Are%20All%20Strangers",
       "title_zh": "我们不是陌生人"
     },
+    "rt": {
+      "critics_score": 83,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/we_are_all_strangers",
+      "search_url": "https://www.rottentomatoes.com/search?search=We%20Are%20All%20Strangers"
+    },
     "sessions": []
   },
   {
@@ -10054,6 +11638,9 @@
       "url": "https://movie.douban.com/subject/38208588/",
       "search_url": "https://www.douban.com/search?cat=1002&q=We%20Are%20The%20Shaggs"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=We%20Are%20The%20Shaggs"
+    },
     "sessions": []
   },
   {
@@ -10081,6 +11668,12 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Weighed%20but%20Found%20Wanting"
     },
+    "rt": {
+      "critics_score": null,
+      "audience_score": 97,
+      "url": "https://www.rottentomatoes.com/m/you-are-weighed-in-the-balance-but-are-found-wanting-tinimbang-ka-nguni",
+      "search_url": "https://www.rottentomatoes.com/search?search=Weighed%20but%20Found%20Wanting"
+    },
     "sessions": []
   },
   {
@@ -10102,6 +11695,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=What%20Do%20the%20Maknines%20Dream%20Of"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=What%20Do%20the%20Maknines%20Dream%20Of"
     },
     "sessions": []
   },
@@ -10125,6 +11721,9 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=When%20the%20Ground%20Paused"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=When%20the%20Ground%20Paused"
+    },
     "sessions": []
   },
   {
@@ -10146,6 +11745,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Where%20the%20grass%20don%E2%80%99t%20grow"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Where%20the%20grass%20don%E2%80%99t%20grow"
     },
     "sessions": []
   },
@@ -10174,6 +11776,9 @@
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Whispers%20in%20May"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Whispers%20in%20May"
+    },
     "sessions": []
   },
   {
@@ -10200,6 +11805,12 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Whispers%20in%20the%20Woods"
+    },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/whispers_in_the_woods",
+      "search_url": "https://www.rottentomatoes.com/search?search=Whispers%20in%20the%20Woods"
     },
     "sessions": []
   },
@@ -10231,6 +11842,9 @@
       "votes": null,
       "url": "https://movie.douban.com/subject/37346571/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Whispers%20of%20a%20Burning%20Scent"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Whispers%20of%20a%20Burning%20Scent"
     },
     "sessions": []
   },
@@ -10264,6 +11878,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Whistle",
       "title_zh": "索命哨"
     },
+    "rt": {
+      "critics_score": 64,
+      "audience_score": 54,
+      "url": "https://www.rottentomatoes.com/m/whistle_2025",
+      "search_url": "https://www.rottentomatoes.com/search?search=Whistle"
+    },
     "sessions": []
   },
   {
@@ -10290,6 +11910,12 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Who%20Are%20You%2C%20Polly%20Maggoo%3F"
+    },
+    "rt": {
+      "critics_score": null,
+      "audience_score": 77,
+      "url": "https://www.rottentomatoes.com/m/who_are_you_polly_maggoo",
+      "search_url": "https://www.rottentomatoes.com/search?search=Who%20Are%20You%2C%20Polly%20Maggoo%3F"
     },
     "sessions": []
   },
@@ -10323,6 +11949,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Wicker",
       "title_zh": "柳枝"
     },
+    "rt": {
+      "critics_score": 91,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/wicker",
+      "search_url": "https://www.rottentomatoes.com/search?search=Wicker"
+    },
     "sessions": []
   },
   {
@@ -10350,6 +11982,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Wilderness",
       "title_zh": "旷野"
     },
+    "rt": {
+      "critics_score": 91,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/the_wilderness",
+      "search_url": "https://www.rottentomatoes.com/search?search=Wilderness"
+    },
     "sessions": []
   },
   {
@@ -10371,6 +12009,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Wind%20in%20Ash"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Wind%20in%20Ash"
     },
     "sessions": []
   },
@@ -10404,6 +12045,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Wishful%20Thinking",
       "title_zh": "痴心妄想"
     },
+    "rt": {
+      "critics_score": 100,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/wishful_thinking_2026",
+      "search_url": "https://www.rottentomatoes.com/search?search=Wishful%20Thinking"
+    },
     "sessions": []
   },
   {
@@ -10435,6 +12082,9 @@
       "url": "https://movie.douban.com/subject/37663720/",
       "search_url": "https://www.douban.com/search?cat=1002&q=The%20Worm"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=The%20Worm"
+    },
     "sessions": []
   },
   {
@@ -10456,6 +12106,9 @@
     "imdb": null,
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=WTF%20Shorts"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=WTF%20Shorts"
     },
     "sessions": []
   },
@@ -10483,6 +12136,12 @@
     },
     "douban": {
       "search_url": "https://www.douban.com/search?cat=1002&q=Yellow%20Letters"
+    },
+    "rt": {
+      "critics_score": 86,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/yellow_letters",
+      "search_url": "https://www.rottentomatoes.com/search?search=Yellow%20Letters"
     },
     "sessions": []
   },
@@ -10516,6 +12175,9 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Yesterday%20Island",
       "title_zh": "隔夜岛"
     },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Yesterday%20Island"
+    },
     "sessions": []
   },
   {
@@ -10548,6 +12210,12 @@
       "search_url": "https://www.douban.com/search?cat=1002&q=Yesterday%20The%20Eye%20Didn%E2%80%99t%20Sleep",
       "title_zh": "昨天，那只眼彻夜未眠"
     },
+    "rt": {
+      "critics_score": null,
+      "audience_score": null,
+      "url": "https://www.rottentomatoes.com/m/yesterday_the_eye_didnt_sleep",
+      "search_url": "https://www.rottentomatoes.com/search?search=Yesterday%20The%20Eye%20Didn%E2%80%99t%20Sleep"
+    },
     "sessions": []
   },
   {
@@ -10579,6 +12247,9 @@
       "url": "https://movie.douban.com/subject/37474355/",
       "search_url": "https://www.douban.com/search?cat=1002&q=Yumburra",
       "title_zh": "勇布拉"
+    },
+    "rt": {
+      "search_url": "https://www.rottentomatoes.com/search?search=Yumburra"
     },
     "sessions": []
   }

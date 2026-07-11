@@ -26,7 +26,8 @@ function updateFab() {
 
 const ratingOf = (f, key) =>
   key === 'douban' ? f.douban?.rating ?? null :
-  key === 'imdb' ? f.imdb?.rating ?? null : null;
+  key === 'imdb' ? f.imdb?.rating ?? null :
+  key === 'rt' ? f.rt?.critics_score ?? null : null;
 
 function sortFilms(list) {
   const copy = [...list];
@@ -49,18 +50,18 @@ const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) =>
 
 const safeUrl = (u) => /^https?:\/\//i.test(u ?? '') ? u : null;
 
-function badge(cls, label, rating, url) {
-  const text = rating != null ? rating.toFixed(1) : '暂无';
-  const inner = `<span class="badge ${cls}${rating == null ? ' none' : ''}">${label} ${text}</span>`;
+function badge(cls, label, text, url) {
+  const inner = `<span class="badge ${cls}">${label} ${text}</span>`;
   const safe = safeUrl(url);
   return safe ? `<a href="${esc(safe)}" target="_blank" rel="noopener">${inner}</a>` : inner;
 }
 
-// 只渲染有评分的 badge（抓不到评分的「暂无」pill 不显示）；若两个都无则整行不渲染。
-function badges(f, doubanUrl, imdbUrl) {
+// 只渲染有评分的 badge（抓不到评分的「暂无」pill 不显示）；若全都无则整行不渲染。
+function badges(f, doubanUrl, imdbUrl, rtUrl) {
   const items = [];
-  if (f.douban?.rating != null) items.push(badge('douban', '豆瓣', f.douban.rating, doubanUrl));
-  if (f.imdb?.rating != null) items.push(badge('imdb', 'IMDB', f.imdb.rating, imdbUrl));
+  if (f.douban?.rating != null) items.push(badge('douban', '豆瓣', f.douban.rating.toFixed(1), doubanUrl));
+  if (f.imdb?.rating != null) items.push(badge('imdb', 'IMDB', f.imdb.rating.toFixed(1), imdbUrl));
+  if (f.rt?.critics_score != null) items.push(badge('rt', '🍅', `${f.rt.critics_score}%`, rtUrl));
   return items.length ? `<div class="badges">${items.join('\n        ')}</div>` : '';
 }
 
@@ -69,6 +70,7 @@ function detailHtml(f) {
   const doubanUrl = safeUrl(f.douban?.url) ?? safeUrl(f.douban?.search_url);
   const miffUrl = safeUrl(f.miff_url);
   const imdbUrl = safeUrl(f.imdb?.url);
+  const rtUrl = safeUrl(f.rt?.url) ?? safeUrl(f.rt?.search_url);
   const synopsis = (f.synopsis_zh ?? f.synopsis_en ?? '').split('\n\n')
     .map((p) => `<p>${esc(p)}</p>`).join('');
   return `${synopsis}
@@ -76,6 +78,7 @@ function detailHtml(f) {
       ${miffUrl ? `<a href="${esc(miffUrl)}" target="_blank" rel="noopener">MIFF 官网页面 ↗</a>` : ''}
       ${doubanUrl ? `<a href="${esc(doubanUrl)}" target="_blank" rel="noopener">${safeUrl(f.douban?.url) ? '豆瓣条目' : '豆瓣搜索'} ↗</a>` : ''}
       ${imdbUrl ? `<a href="${esc(imdbUrl)}" target="_blank" rel="noopener">IMDB ↗</a>` : ''}
+      ${rtUrl ? `<a href="${esc(rtUrl)}" target="_blank" rel="noopener">${safeUrl(f.rt?.url) ? '烂番茄条目' : '烂番茄搜索'} ↗</a>` : ''}
     </p>`;
 }
 
@@ -84,6 +87,7 @@ function card(f) {
     .filter(Boolean).join(' · ');
   const doubanUrl = safeUrl(f.douban?.url) ?? safeUrl(f.douban?.search_url);
   const imdbUrl = safeUrl(f.imdb?.url);
+  const rtUrl = safeUrl(f.rt?.url) ?? safeUrl(f.rt?.search_url);
   const posterHtml = f.poster
     ? `<img class="poster" src="${esc(f.poster)}" alt="${esc(f.title_zh ?? f.title_en)} 海报" loading="lazy">`
     : '<div class="poster poster-empty"></div>';
@@ -94,7 +98,7 @@ function card(f) {
       <button class="fav-btn${faved ? ' faved' : ''}" aria-label="${faved ? '移出想看' : '加入想看'}" aria-pressed="${faved}">${faved ? '♥' : '♡'}</button>
       <h2>${esc(f.title_zh ?? f.title_en)}</h2>
       <p class="title-en">${esc(f.title_en)}</p>
-      ${badges(f, doubanUrl, imdbUrl)}
+      ${badges(f, doubanUrl, imdbUrl, rtUrl)}
       ${f.highlight_zh ? `<p class="highlight">💡 ${esc(f.highlight_zh)}</p>` : ''}
       <p class="meta"><span>${esc(meta)}</span><span class="chevron" aria-hidden="true">⌄</span></p>
       <div class="detail" hidden></div>

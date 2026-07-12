@@ -107,6 +107,7 @@ export async function translate() {
   const raw = JSON.parse(readFileSync(source, 'utf8'));
   // slug → 官网题材分类（enrich-genres 产物）；缺文件时所有影片 genres 为空数组
   const genreMap = existsSync('data/genres.json') ? JSON.parse(readFileSync('data/genres.json', 'utf8')) : {};
+  const strandMap = existsSync('data/strands.json') ? JSON.parse(readFileSync('data/strands.json', 'utf8')) : {};
   const out = [];
   const errors = [];
   for (const [i, f] of raw.films.entries()) {
@@ -127,6 +128,7 @@ export async function translate() {
       runtime: f.runtime,
       format: f.genre ?? null,           // 形态：Feature / Short / Shorts Package…
       genres: genreMap[f.slug] ?? [],    // 官网题材分类 slug 列表
+      strands: strandMap[f.slug] ?? [],  // 官网专题单元 slug 列表
 
       synopsis_en: f.synopsis_en,
       synopsis_zh: t.synopsis_zh,

@@ -3,6 +3,7 @@ let bySlug = new Map();
 let sortKey = 'imdb';
 let searchQuery = '';
 let activeGenre = 'all';
+let activeStrand = 'all';
 
 const $list = document.getElementById('film-list');
 
@@ -13,6 +14,25 @@ const GENRE_LABELS = {
   music: '音乐', musical: '音乐剧', mystery: '悬疑', period: '时代剧',
   romance: '爱情', 'sci-fi': '科幻', thriller: '惊悚',
 };
+
+const STRAND_LABELS = {
+  'special-events': '特别活动', 'bright-horizons': '新锐竞赛', headliners: '重磅首映',
+  'africa-middle-east': '非洲与中东', animation: '动画单元', 'asia-pacific': '亚太',
+  australia: '澳大利亚', 'critical-condition': '临界状态', 'doc-visions': '纪录视野',
+  documentaries: '纪录片单元', 'europe-uk': '欧洲与英国', experimentations: '实验影像',
+  'family-films': '家庭观影', 'kim-novak-hollywood-heretic': '金·诺瓦克回顾',
+  'latin-america': '拉丁美洲', 'lisandro-alonso-frontiers': '阿隆索回顾',
+  'miff-online': '线上展映', 'miff-schools': '校园场', 'miff-shorts': '短片单元',
+  'miff-talks': '讲座对谈', 'miff-xr': 'XR', 'music-on-film': '音乐电影',
+  'the-natural-world': '自然世界', 'night-shift': '午夜场', 'north-america': '北美',
+  restorations: '修复经典', 'tales-of-cinema': '电影的故事',
+  'ulrike-ottinger-radical-travels': '奥廷格回顾', 'food-film': '美食×电影',
+  'armani-beauty-cinema-club': '开幕之夜俱乐部',
+};
+
+// 未收录的新 slug 兜底：转成首字母大写的英文词
+const labelOf = (labels, key) =>
+  labels[key] ?? key.split('-').map((w) => w[0].toUpperCase() + w.slice(1)).join(' ');
 
 // —— 想看列表：只存 slug 数组在 localStorage，片名/链接渲染时从 films.json 现查 ——
 const WATCHLIST_KEY = 'miff2026-watchlist';
@@ -134,6 +154,7 @@ function visibleFilms() {
   const q = searchQuery.trim().toLowerCase();
   return films.filter((f) => {
     if (activeGenre !== 'all' && !(f.genres ?? []).includes(activeGenre)) return false;
+    if (activeStrand !== 'all' && !(f.strands ?? []).includes(activeStrand)) return false;
     if (!q) return true;
     // highlight_zh 也纳入：导演/演员的中文名往往只出现在一句话看点里（如"滨口龙介"）
     return [f.title_zh, f.title_en, f.director, f.highlight_zh].some((v) => (v ?? '').toLowerCase().includes(q));
@@ -161,24 +182,29 @@ document.getElementById('search').addEventListener('input', (e) => {
   }, 250);
 });
 
-// —— 题材筛选：按实际数据生成按钮，空类自动不显示 ——
-function buildGenreBar() {
+// —— 题材/专题筛选：按实际数据生成按钮（含影片数），空类自动不显示 ——
+function buildFilterBar(barId, field, labels, allLabel) {
   const counts = {};
-  for (const f of films) for (const g of f.genres ?? []) counts[g] = (counts[g] || 0) + 1;
-  const chips = Object.keys(GENRE_LABELS)
-    .filter((g) => counts[g])
-    .map((g) => `<button data-genre="${g}">${GENRE_LABELS[g]} ${counts[g]}</button>`);
-  document.getElementById('genre-bar').innerHTML =
-    `<button data-genre="all" class="active">全部</button>${chips.join('')}`;
+  for (const f of films) for (const k of f[field] ?? []) counts[k] = (counts[k] || 0) + 1;
+  const keys = Object.keys(counts).sort((a, b) => counts[b] - counts[a]);
+  const chips = keys.map((k) => `<button data-key="${esc(k)}">${esc(labelOf(labels, k))} ${counts[k]}</button>`);
+  document.getElementById(barId).innerHTML =
+    `<button data-key="all" class="active">${allLabel}</button>${chips.join('')}`;
 }
 
-document.getElementById('genre-bar').addEventListener('click', (e) => {
-  const btn = e.target.closest('button[data-genre]');
-  if (!btn) return;
-  activeGenre = btn.dataset.genre;
-  document.querySelectorAll('.genre-bar button').forEach((b) => b.classList.toggle('active', b === btn));
-  render();
-});
+function bindFilterBar(barId, setActive) {
+  const bar = document.getElementById(barId);
+  bar.addEventListener('click', (e) => {
+    const btn = e.target.closest('button[data-key]');
+    if (!btn) return;
+    setActive(btn.dataset.key);
+    bar.querySelectorAll('button').forEach((b) => b.classList.toggle('active', b === btn));
+    render();
+  });
+}
+
+bindFilterBar('genre-bar', (k) => { activeGenre = k; });
+bindFilterBar('strand-bar', (k) => { activeStrand = k; });
 
 // —— 回到顶部 ——
 const $topBtn = document.getElementById('top-btn');
@@ -288,7 +314,8 @@ fetch('films.json')
   .then((data) => {
     films = data;
     bySlug = new Map(data.map((f) => [f.slug, f]));
-    buildGenreBar();
+    buildFilterBar('genre-bar', 'genres', GENRE_LABELS, '全部题材');
+    buildFilterBar('strand-bar', 'strands', STRAND_LABELS, '全部单元');
     render();
     updateFab();
   })

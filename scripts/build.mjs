@@ -3,6 +3,7 @@ const STEPS = {
   imdb: async () => (await import('./enrich-imdb.mjs')).enrich(),
   douban: async () => (await import('./enrich-douban.mjs')).enrich(),
   rt: async () => (await import('./enrich-rt.mjs')).enrich(),
+  genres: async () => (await import('./enrich-genres.mjs')).enrich(),
   translate: async () => (await import('./translate.mjs')).translate(),
 };
 

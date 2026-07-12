@@ -1,8 +1,18 @@
 let films = [];
 let bySlug = new Map();
 let sortKey = 'imdb';
+let searchQuery = '';
+let activeGenre = 'all';
 
 const $list = document.getElementById('film-list');
+
+const GENRE_LABELS = {
+  'action-adventure': '动作冒险', animation: '动画', comedy: '喜剧', crime: '犯罪',
+  dance: '舞蹈', documentary: '纪录片', drama: '剧情', experimental: '实验',
+  fantasy: '奇幻', historical: '历史', horror: '恐怖', mockumentary: '伪纪录',
+  music: '音乐', musical: '音乐剧', mystery: '悬疑', period: '时代剧',
+  romance: '爱情', 'sci-fi': '科幻', thriller: '惊悚',
+};
 
 // —— 想看列表：只存 slug 数组在 localStorage，片名/链接渲染时从 films.json 现查 ——
 const WATCHLIST_KEY = 'miff2026-watchlist';
@@ -120,13 +130,62 @@ const adCard = () => `<a class="card ad-card" href="https://bookedagain.xyz/?utm
     </div>
   </a>`;
 
+function visibleFilms() {
+  const q = searchQuery.trim().toLowerCase();
+  return films.filter((f) => {
+    if (activeGenre !== 'all' && !(f.genres ?? []).includes(activeGenre)) return false;
+    if (!q) return true;
+    // highlight_zh 也纳入：导演/演员的中文名往往只出现在一句话看点里（如"滨口龙介"）
+    return [f.title_zh, f.title_en, f.director, f.highlight_zh].some((v) => (v ?? '').toLowerCase().includes(q));
+  });
+}
+
 function render() {
-  const cards = sortFilms(films).map(card);
+  const shown = visibleFilms();
+  const cards = sortFilms(shown).map(card);
   for (let pos = AD_POSITION; pos < cards.length; pos += AD_INTERVAL + 1) {
     cards.splice(pos, 0, adCard());
   }
-  $list.innerHTML = cards.join('');
+  $list.innerHTML = cards.join('') || '<p class="error">没有匹配的影片</p>';
+  document.getElementById('notice').textContent =
+    shown.length === films.length ? `共 ${films.length} 部影片` : `${shown.length} / ${films.length} 部影片`;
 }
+
+// —— 搜索（防抖）——
+let searchTimer;
+document.getElementById('search').addEventListener('input', (e) => {
+  clearTimeout(searchTimer);
+  searchTimer = setTimeout(() => {
+    searchQuery = e.target.value;
+    render();
+  }, 250);
+});
+
+// —— 题材筛选：按实际数据生成按钮，空类自动不显示 ——
+function buildGenreBar() {
+  const counts = {};
+  for (const f of films) for (const g of f.genres ?? []) counts[g] = (counts[g] || 0) + 1;
+  const chips = Object.keys(GENRE_LABELS)
+    .filter((g) => counts[g])
+    .map((g) => `<button data-genre="${g}">${GENRE_LABELS[g]} ${counts[g]}</button>`);
+  document.getElementById('genre-bar').innerHTML =
+    `<button data-genre="all" class="active">全部</button>${chips.join('')}`;
+}
+
+document.getElementById('genre-bar').addEventListener('click', (e) => {
+  const btn = e.target.closest('button[data-genre]');
+  if (!btn) return;
+  activeGenre = btn.dataset.genre;
+  document.querySelectorAll('.genre-bar button').forEach((b) => b.classList.toggle('active', b === btn));
+  render();
+});
+
+// —— 回到顶部 ——
+const $topBtn = document.getElementById('top-btn');
+window.addEventListener('scroll', () => {
+  $topBtn.hidden = window.scrollY < 600;
+}, { passive: true });
+$topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
 document.getElementById('sort-bar').addEventListener('click', (e) => {
   const btn = e.target.closest('button[data-sort]');
@@ -229,7 +288,7 @@ fetch('films.json')
   .then((data) => {
     films = data;
     bySlug = new Map(data.map((f) => [f.slug, f]));
-    document.getElementById('notice').textContent = `共 ${films.length} 部影片`;
+    buildGenreBar();
     render();
     updateFab();
   })

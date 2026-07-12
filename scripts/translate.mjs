@@ -105,6 +105,8 @@ export async function translate() {
   // rt 步骤可能被单独跳过（--step=translate），此时退回豆瓣产物，rt 字段为空
   const source = existsSync('data/enriched-rt.json') ? 'data/enriched-rt.json' : 'data/enriched-douban.json';
   const raw = JSON.parse(readFileSync(source, 'utf8'));
+  // slug → 官网题材分类（enrich-genres 产物）；缺文件时所有影片 genres 为空数组
+  const genreMap = existsSync('data/genres.json') ? JSON.parse(readFileSync('data/genres.json', 'utf8')) : {};
   const out = [];
   const errors = [];
   for (const [i, f] of raw.films.entries()) {
@@ -123,7 +125,9 @@ export async function translate() {
       year: f.year,
       country: (f.countries ?? []).join(' / ') || null,
       runtime: f.runtime,
-      genres: f.genre ? [f.genre] : [],
+      format: f.genre ?? null,           // 形态：Feature / Short / Shorts Package…
+      genres: genreMap[f.slug] ?? [],    // 官网题材分类 slug 列表
+
       synopsis_en: f.synopsis_en,
       synopsis_zh: t.synopsis_zh,
       highlight_zh: t.highlight_zh,
